@@ -28,7 +28,7 @@ namespace test
         //Empty Constractor - defualt param
         public db_connection()
         {
-             _server = "10.0.0.8";
+             _server = "10.0.0.14";
             //_server = "10.0.0.3";
           //  _server = "10.0.0.6";
             //_userId = "root";
@@ -204,10 +204,13 @@ namespace test
         {
 
             string query = "select * from userlist";
-            List<string>[] list = new List<string>[3];
+            List<string>[] list = new List<string>[5];
             list[0] = new List<string>();
             list[1] = new List<string>();
             list[2] = new List<string>();
+            list[3] = new List<string>();
+            list[4] = new List<string>();
+
 
             try
             {
@@ -226,6 +229,9 @@ namespace test
                     list[0].Add(dataReader["username"] + "");
                     list[1].Add(dataReader["password"] + "");
                     list[2].Add(dataReader["id"] + "");
+                    list[3].Add(dataReader["class"] + "");
+                    list[4].Add(dataReader["homework"] + "");
+
                 }
 
                 //close Data Reader
@@ -268,6 +274,44 @@ namespace test
             conn.Close();
             return false;
         }
+        public bool insert_words_to_class(int clss,int wordId,int userId,int classNumber)
+        {
+            string cl="class";
+            if (clss == 1)
+            {
+                cl = "homework";
+            }
+            try
+            {
+               
+                string query = "INSERT INTO `class` (`class`, `wordId`, `userId`, `ClassNumber`, `yesNo`) VALUES ('" +cl+ "','" + wordId + "','" + userId + "','"+classNumber+"','No');";
+                conn.Open();
+                cmd = new MySqlCommand(query, conn);
+                Int32 ans = -5;
+                ans = Convert.ToInt32(cmd.ExecuteScalar());
+               
+                query = "UPDATE `safali`.`userlist` SET `class` = '" + classNumber + "' WHERE `userlist`.`id` = " + userId + ";";
+                conn.Close();
+                conn.Open();
+                cmd = new MySqlCommand(query, conn);
+                ans = -5;
+                ans = Convert.ToInt32(cmd.ExecuteScalar());
+                if (ans != -5)
+                {
+                    return true;
+                }
+                }
+                
+            
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+                return false;
+            }
+            return false;
+        } 
+
+
        // INSERT INTO `safali`.`userdetails` (`id`, `idNumber`, `userName`, `userGender`, `userAge`, `userCity`, `userStreet`, `userHouseNumber`, `userCellPhone`) VALUES ('2', 'ת.ז', 'שם', NULL, NULL, NULL, NULL, NULL, NULL);
         public bool inser_user_details(string id,string idNumber,string userName,string userGender,string userAge,string userCity,string userStreet,string userHouseNumber,string userCellPhone)
         {
@@ -447,6 +491,7 @@ namespace test
             string query = "select * from dictionary" + where;
             List<string>[] list = new List<string>[10];
             list[0] = new List<string>();
+            list[1] = new List<string>();
 
             try
             {
@@ -463,6 +508,7 @@ namespace test
                 while (dataReader.Read())
                 {
                     list[0].Add(dataReader["word"] + "");
+                    list[1].Add(dataReader["id"] + "");
                 }
 
                 //close Data Reader
@@ -525,6 +571,40 @@ namespace test
             ms.Close();
             return re;
         }
+        public int getCurrentClass(int userId) 
+        {
+            string query = "select class from userlist where id="+userId+"";
+            int ans = -1;
 
+
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlDataReader dataReader = null;
+                dataReader = cmd.ExecuteReader();
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    ans = Convert.ToInt32(dataReader["class"]);
+                }
+
+                //close Data Reader
+                dataReader.Close();
+                //return list to be displayed
+                return ans;
+            }
+            catch
+            {
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+            return -1;
+        }
     }
 }

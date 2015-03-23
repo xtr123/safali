@@ -83,6 +83,12 @@
     <Compile Include="edWord.Designer.cs">
       <DependentUpon>edWord.cs</DependentUpon>
     </Compile>
+    <Compile Include="game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="game.Designer.cs">
+      <DependentUpon>game.cs</DependentUpon>
+    </Compile>
     <Compile Include="makeClassWord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="edWord.resx">
       <DependentUpon>edWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="game.resx">
+      <DependentUpon>game.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="makeClassWord.resx">
       <DependentUpon>makeClassWord.cs</DependentUpon>

@@ -37,7 +37,12 @@ namespace test
 
         private void askAdministrator_form_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            if (_back == null)
+            {
+                loginForm k = new loginForm();
+                k.Show();
+                this.Dispose();
+            }
             _back.Show();
             this.Dispose();
         }

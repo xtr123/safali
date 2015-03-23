@@ -20,6 +20,8 @@ namespace test
         {
           
             InitializeComponent();
+           // makeClassWord m = new makeClassWord(this,"gil");
+            //m.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
