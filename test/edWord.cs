@@ -372,5 +372,11 @@ namespace test
             this.Dispose();
         }
 
+        //delete word
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

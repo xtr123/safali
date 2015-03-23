@@ -28,7 +28,7 @@ namespace test
         //Empty Constractor - defualt param
         public db_connection()
         {
-             _server = "10.0.0.14";
+             _server = "10.0.0.3";
             //_server = "10.0.0.3";
           //  _server = "10.0.0.6";
             //_userId = "root";

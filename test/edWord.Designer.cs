@@ -89,6 +89,7 @@
             this.okButton = new System.Windows.Forms.Button();
             this.comboBox21 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -715,7 +716,7 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.pictureBox3.Image = global::test.Properties.Resources.לוגו;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 11);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 11);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(180, 84);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -737,7 +738,7 @@
             this.okButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.okButton.BackgroundImage = global::test.Properties.Resources.dictionary1;
             this.okButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.okButton.Cursor = System.Windows.Forms.Cursors.No;
+            this.okButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.okButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.okButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.okButton.Location = new System.Drawing.Point(696, 569);
@@ -771,12 +772,24 @@
             this.label10.TabIndex = 61;
             this.label10.Text = "בחירת מילה לעריכה:";
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button2.Location = new System.Drawing.Point(79, 109);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(137, 39);
+            this.button2.TabIndex = 62;
+            this.button2.Text = "מחיקת מילה";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // edWord_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(891, 681);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBox21);
             this.Controls.Add(this.label9);
@@ -911,6 +924,7 @@
         private System.Windows.Forms.ComboBox comboBox15;
         private System.Windows.Forms.ComboBox comboBox21;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button2;
 
 
     }

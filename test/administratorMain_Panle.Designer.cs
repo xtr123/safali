@@ -69,7 +69,7 @@
             this.add_remove_Word_button.Name = "add_remove_Word_button";
             this.add_remove_Word_button.Size = new System.Drawing.Size(170, 23);
             this.add_remove_Word_button.TabIndex = 3;
-            this.add_remove_Word_button.Text = "הוספה \\ הסרה מילים";
+            this.add_remove_Word_button.Text = "הוספת מילים";
             this.add_remove_Word_button.UseVisualStyleBackColor = true;
             this.add_remove_Word_button.Click += new System.EventHandler(this.add_remove_Word_button_Click);
             // 
@@ -79,7 +79,7 @@
             this.edit_word.Name = "edit_word";
             this.edit_word.Size = new System.Drawing.Size(170, 23);
             this.edit_word.TabIndex = 4;
-            this.edit_word.Text = "עריכת מילה";
+            this.edit_word.Text = "עריכת\\מחיקת מילה";
             this.edit_word.UseVisualStyleBackColor = true;
             this.edit_word.Click += new System.EventHandler(this.edit_word_Click);
             // 
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 316);
+            this.ClientSize = new System.Drawing.Size(590, 316);
             this.Controls.Add(this.edit_word);
             this.Controls.Add(this.add_remove_Word_button);
             this.Controls.Add(this.button1);
