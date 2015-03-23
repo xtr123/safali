@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F8B21A6-D290-4A09-B461-03CF402F6D7E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>test</RootNamespace>
+    <AssemblyName>test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>.\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addRemoveUserDetail_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addRemoveUserDetail_form.Designer.cs">
+      <DependentUpon>addRemoveUserDetail_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addRemoveUser_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addRemoveUser_form.Designer.cs">
+      <DependentUpon>addRemoveUser_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addremoveWord_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addremoveWord_form.Designer.cs">
+      <DependentUpon>addremoveWord_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="administratorMain_Panle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administratorMain_Panle.Designer.cs">
+      <DependentUpon>administratorMain_Panle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="askAdministrator_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="askAdministrator_form.Designer.cs">
+      <DependentUpon>askAdministrator_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edWord.Designer.cs">
+      <DependentUpon>edWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="makeClassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="makeClassWord.Designer.cs">
+      <DependentUpon>makeClassWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="milaAlgo.cs" />
+    <Compile Include="Modle\db_connection.cs" />
+    <Compile Include="patitionetSelect_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="patitionetSelect_Form.Designer.cs">
+      <DependentUpon>patitionetSelect_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="selectWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selectWord.Designer.cs">
+      <DependentUpon>selectWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\login_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\login_form.Designer.cs">
+      <DependentUpon>login_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\login.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="addRemoveUserDetail_form.resx">
+      <DependentUpon>addRemoveUserDetail_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addRemoveUser_form.resx">
+      <DependentUpon>addRemoveUser_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addremoveWord_form.resx">
+      <DependentUpon>addremoveWord_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administratorMain_Panle.resx">
+      <DependentUpon>administratorMain_Panle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="askAdministrator_form.resx">
+      <DependentUpon>askAdministrator_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edWord.resx">
+      <DependentUpon>edWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="makeClassWord.resx">
+      <DependentUpon>makeClassWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="patitionetSelect_Form.resx">
+      <DependentUpon>patitionetSelect_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selectWord.resx">
+      <DependentUpon>selectWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\login_form.resx">
+      <DependentUpon>login_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\Mammooth_128x128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\לוגו.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\42mv.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\Funshine Bear 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\dictionary.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\drill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\magician.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\book.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
