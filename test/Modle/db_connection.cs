@@ -80,6 +80,8 @@ namespace test
         }
         // the int reference what we are look for:
         //0 - means login only return a integer
+       
+        
         public Object Select(string query, int j)
         {
             conn.Open();
@@ -274,6 +276,35 @@ namespace test
             conn.Close();
             return false;
         }
+        public bool updateWordInClass(int userid, string wordid, int j)
+        {
+            string yesNo="No1";
+            if (j == 1)
+                yesNo = "Yes";
+             try
+            {
+                string query =   "UPDATE class SET yesNO = '"+yesNo+"' WHERE wordid = '"+wordid+"' and userid='"+userid+"';";
+                conn.Open();
+                cmd = new MySqlCommand(query, conn);
+                Int32 ans = -5;
+                ans = Convert.ToInt32(cmd.ExecuteScalar());   
+              if (ans != -5)
+                {
+                    return true;
+                }
+                }
+                
+            
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+                return false;
+            }
+            return false;
+        } 
+
+
+        
         public bool insert_words_to_class(int clss,int wordId,int userId,int classNumber)
         {
             string cl="class";
@@ -414,6 +445,62 @@ namespace test
         {
             string[] arr = new string[11];
             string query="select * from dictionary where word='"+word1+"';";
+            try
+            {
+                conn.Open();
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = null;
+
+                dataReader = cmd.ExecuteReader();
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    arr[0] = dataReader["id"] + "";
+                    arr[1] = dataReader["word"] + "";
+                    arr[2] = dataReader["syllable"] + "";
+                    arr[3] = dataReader["openClose"] + "";
+                    arr[4] = dataReader["p_cut"] + "";
+                    arr[5] = dataReader["agaia"] + "";
+                    arr[6] = dataReader["koliut"] + "";
+                    arr[7] = dataReader["atama"] + "";
+                    arr[8] = dataReader["diber"] + "";
+                    arr[9] = dataReader["tzlil_place"] + "";
+                    byte[] imgg = (byte[])(dataReader["pic"]);
+                    if (imgg == null)
+                    {
+                        pb.Image = null;
+                    }
+                    else
+                    {
+                        MemoryStream mstream = new MemoryStream(imgg);
+                        pb.Image = System.Drawing.Image.FromStream(mstream);
+                    }
+                }
+
+                //close Data Reader
+                dataReader.Close();
+                //return list to be displayed
+                return arr;
+            }
+            catch
+            {
+                return arr;
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+
+        }
+        public string[] getWordDataById(string id, PictureBox pb)
+        {
+            string[] arr = new string[11];
+            string query = "select * from dictionary where id='" + id + "';";
             try
             {
                 conn.Open();
@@ -629,5 +716,50 @@ namespace test
             }
             return -1;
         }
+        public List<string>[] Selectgame(int userid,int classNumber)
+        {
+
+            string query = "SELECT `ClassNumber`,`wordId` FROM `class` WHERE userid='"+userid+"' and ClassNumber='"+classNumber+"' and yesNo='No';";
+            List<string>[] list = new List<string>[2];
+            list[0] = new List<string>();
+            list[1] = new List<string>();
+           
+
+            try
+            {
+
+                //Open connection
+                conn.Open();
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = null;
+
+                dataReader = cmd.ExecuteReader();
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    list[0].Add(dataReader["wordid"] + "");
+                }
+
+                //close Data Reader
+                dataReader.Close();
+                //return list to be displayed
+                return list;
+            }
+            catch
+            {
+                return list;
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
     }
+
 }

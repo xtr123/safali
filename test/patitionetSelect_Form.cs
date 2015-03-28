@@ -80,8 +80,8 @@ namespace test
         {
 
             _userId = Convert.ToInt32(list[2].ElementAt(userlist.SelectedIndex));
-            game g = new game(_userId);
-            g.Show();
+            game g = new game(_userId,this);
+           g.Show();
             this.Hide();
         }
     }
