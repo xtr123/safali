@@ -139,6 +139,7 @@ namespace test
              {
                  foreach (string element in list[0])
                  {
+                     
                      listBox1.Items.Add(element);
                  }
                 

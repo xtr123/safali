@@ -121,6 +121,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox1.Location = new System.Drawing.Point(706, 140);
+            this.textBox1.MaxLength = 1;
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox1.Size = new System.Drawing.Size(45, 35);
@@ -132,6 +133,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox2.Location = new System.Drawing.Point(653, 140);
+            this.textBox2.MaxLength = 1;
             this.textBox2.Name = "textBox2";
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox2.Size = new System.Drawing.Size(45, 35);
@@ -143,6 +145,7 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox3.Location = new System.Drawing.Point(601, 140);
+            this.textBox3.MaxLength = 1;
             this.textBox3.Name = "textBox3";
             this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox3.Size = new System.Drawing.Size(45, 35);
@@ -154,6 +157,7 @@
             // 
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox4.Location = new System.Drawing.Point(548, 140);
+            this.textBox4.MaxLength = 1;
             this.textBox4.Name = "textBox4";
             this.textBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox4.Size = new System.Drawing.Size(45, 35);
@@ -165,6 +169,7 @@
             // 
             this.textBox5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox5.Location = new System.Drawing.Point(495, 140);
+            this.textBox5.MaxLength = 1;
             this.textBox5.Name = "textBox5";
             this.textBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox5.Size = new System.Drawing.Size(45, 35);
@@ -176,6 +181,7 @@
             // 
             this.textBox6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox6.Location = new System.Drawing.Point(442, 140);
+            this.textBox6.MaxLength = 1;
             this.textBox6.Name = "textBox6";
             this.textBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox6.Size = new System.Drawing.Size(45, 35);
@@ -187,6 +193,7 @@
             // 
             this.textBox7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox7.Location = new System.Drawing.Point(390, 140);
+            this.textBox7.MaxLength = 1;
             this.textBox7.Name = "textBox7";
             this.textBox7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox7.Size = new System.Drawing.Size(45, 35);
@@ -198,6 +205,7 @@
             // 
             this.textBox8.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox8.Location = new System.Drawing.Point(337, 140);
+            this.textBox8.MaxLength = 1;
             this.textBox8.Name = "textBox8";
             this.textBox8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox8.Size = new System.Drawing.Size(45, 35);
@@ -209,6 +217,7 @@
             // 
             this.textBox9.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox9.Location = new System.Drawing.Point(285, 140);
+            this.textBox9.MaxLength = 1;
             this.textBox9.Name = "textBox9";
             this.textBox9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox9.Size = new System.Drawing.Size(45, 35);
@@ -220,6 +229,7 @@
             // 
             this.textBox10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox10.Location = new System.Drawing.Point(232, 140);
+            this.textBox10.MaxLength = 1;
             this.textBox10.Name = "textBox10";
             this.textBox10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox10.Size = new System.Drawing.Size(45, 35);
@@ -231,6 +241,7 @@
             // 
             this.textBox11.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox11.Location = new System.Drawing.Point(180, 140);
+            this.textBox11.MaxLength = 1;
             this.textBox11.Name = "textBox11";
             this.textBox11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox11.Size = new System.Drawing.Size(45, 35);
@@ -242,6 +253,7 @@
             // 
             this.textBox12.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox12.Location = new System.Drawing.Point(127, 140);
+            this.textBox12.MaxLength = 1;
             this.textBox12.Name = "textBox12";
             this.textBox12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox12.Size = new System.Drawing.Size(45, 35);
@@ -253,6 +265,7 @@
             // 
             this.textBox13.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox13.Location = new System.Drawing.Point(75, 140);
+            this.textBox13.MaxLength = 1;
             this.textBox13.Name = "textBox13";
             this.textBox13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox13.Size = new System.Drawing.Size(45, 35);
@@ -264,6 +277,7 @@
             // 
             this.textBox14.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox14.Location = new System.Drawing.Point(22, 140);
+            this.textBox14.MaxLength = 1;
             this.textBox14.Name = "textBox14";
             this.textBox14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox14.Size = new System.Drawing.Size(45, 35);

@@ -41,9 +41,14 @@ namespace test
             list = new List<string>[1];
             list[0] = new List<string>();
             list = k.Word();
-            if (list[0].Count > 0)
+          /*  if (list[0].Count > 0)
             {
                 comboBox21.DataSource = list[0];
+            }
+           */
+            foreach (string elemnt in list[0])
+            {
+                comboBox21.Items.Add(elemnt);
             }
         }
 
@@ -375,7 +380,25 @@ namespace test
         //delete word
         private void button2_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("בטוח שברצונך למחוק את המילה", "מחיקת מילה", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    db_connection k = new db_connection();
+                    k.delword(comboBox21.Text);
+                   
+                    edWord_form m = new edWord_form(_back);
+                    m.Show();
+                    this.Dispose();
+                
+                }
+                catch { }
+            }
+            else
+            {
 
+            }        
         }
 
     }

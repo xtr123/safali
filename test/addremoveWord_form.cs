@@ -39,6 +39,7 @@ namespace test
             comboBox12.DataSource = nikud.Clone();
             comboBox13.DataSource = nikud.Clone();
             comboBox14.DataSource = nikud.Clone();
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -113,76 +114,154 @@ namespace test
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox1.Text != "")
+            if (textBox1.Text[0] < 'א' || textBox1.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox1.Text = "";
+            } 
+         
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox2.Text != "")
+            if (textBox2.Text[0] < 'א' || textBox2.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox2.Text = "";
+            } 
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox3.Text != "")
+            if (textBox3.Text[0] < 'א' || textBox3.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox3.Text = "";
+            } 
         }
 
         private void textBox14_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox14.Text != "")
+            if (textBox14.Text != "")
+            if (textBox14.Text[0] < 'א' || textBox14.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox14.Text = "";
+            } 
         }
 
         private void textBox12_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox12.Text != "")
+            if (textBox12.Text[0] < 'א' || textBox12.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox12.Text = "";
+            } 
         }
 
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox11.Text != "")
+            if (textBox11.Text[0] < 'א' || textBox11.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox11.Text = "";
+            } 
         }
 
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox10.Text != "")
+            if (textBox10.Text[0] < 'א' || textBox10.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox10.Text = "";
+            } 
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox9.Text != "")
+            if (textBox9.Text[0] < 'א' || textBox9.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox9.Text = "";
+            } 
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox8.Text != "")
+             if (textBox8.Text[0] < 'א' || textBox8.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox8.Text = "";
+            } 
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
+            if (textBox7.Text != "")
 
+            if (textBox7.Text[0] < 'א' || textBox7.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox7.Text = "";
+            } 
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
+            if (textBox6.Text != "")
 
+            if (textBox6.Text[0] < 'א' || textBox6.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox6.Text = "";
+            } 
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
+            if (textBox5.Text != "")
 
+            if (textBox5.Text[0] < 'א' || textBox5.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox5.Text = "";
+            } 
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
+            if (textBox4.Text != "")
 
+            if (textBox4.Text[0] < 'א' || textBox4.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox4.Text = "";
+            } 
         }
 
         private void textBox13_TextChanged(object sender, EventArgs e)
         {
+            if (textBox13.Text != "")
 
+            if (textBox13.Text[0] < 'א' || textBox13.Text[0] > 'ת')
+            {
+                MessageBox.Show("רק אותיות בעברית");
+                textBox13.Text = "";
+            } 
         }
 
         private void okButton_Click(object sender, EventArgs e)
         {
+            if (picpath != "") { 
             byte[] imageBT = null;
             FileStream fstream = new FileStream(picpath, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fstream);
@@ -245,6 +324,11 @@ namespace test
                 _back.Show();
                 this.Dispose();
             }
+            }
+            else
+            {
+                MessageBox.Show("אין תמונה");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -256,6 +340,7 @@ namespace test
             
             if (res.ShowDialog() == DialogResult.OK)
             {
+             
                 pictureBox1.Image = Image.FromFile(res.FileName);
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 MemoryStream ms = new MemoryStream();

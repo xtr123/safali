@@ -28,7 +28,7 @@ namespace test
         //Empty Constractor - defualt param
         public db_connection()
         {
-             _server = "10.0.0.3";
+            _server = "10.0.0.14";
             //_server = "10.0.0.3";
           //  _server = "10.0.0.6";
             //_userId = "root";
@@ -376,6 +376,29 @@ namespace test
                 ans = Convert.ToInt32(cmd.ExecuteScalar());
                 if (ans != -5)
                 {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+                return false;
+            }
+            return false;
+        }
+
+        public bool delword(string w)
+        {
+            try
+            {
+                string query = "DELETE FROM `dictionary` WHERE word='" + w + "';";
+                conn.Open();
+                cmd = new MySqlCommand(query, conn);
+                Int32 ans = -5;
+                ans = Convert.ToInt32(cmd.ExecuteScalar());
+                if (ans != -5)
+                {
+                    MessageBox.Show("Deleted");
                     return true;
                 }
             }
