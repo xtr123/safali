@@ -19,8 +19,10 @@ namespace test
         string _where;
         int _userId;
         int _classNumber;
-        public makeClassWord(Form back,string name,int userId,int classNumber)
+        int _class;
+        public makeClassWord(Form back,string name,int userId,int classNumber,int classHome)
         {
+            _class = classHome;
             _classNumber = classNumber+1;
             _back = back;
             _userName = name;
@@ -214,7 +216,7 @@ namespace test
                     //user id
                    //word id MessageBox.Show(list[1].ElementAt(list[0].IndexOf(element))+"");
                     db_connection m = new db_connection();
-                   j = m.insert_words_to_class(0, Convert.ToInt32(list[1].ElementAt(list[0].IndexOf(element))), _userId,_classNumber);
+                   j = m.insert_words_to_class(_class, Convert.ToInt32(list[1].ElementAt(list[0].IndexOf(element))), _userId,_classNumber);
                    
                 }
                 MessageBox.Show(j + "");

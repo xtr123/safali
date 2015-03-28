@@ -20,8 +20,7 @@ namespace test
         {
           
             InitializeComponent();
-           // makeClassWord m = new makeClassWord(this,"gil");
-            //m.Show();
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,7 +55,11 @@ namespace test
                 login now = new login(_username, _password);
                 if (now.ans == 1)
                 {
-                    MessageBox.Show("Welcome");
+                    db_connection dod = new db_connection();
+                   int j= dod.getUserId(_username);
+                   game t = new game(j,this,1);
+                   t.Show();
+                   this.Hide();
                 //now we want to move the homework page select game.
                 }
                 else if (now.ans == 2)

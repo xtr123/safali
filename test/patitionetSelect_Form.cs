@@ -71,7 +71,7 @@ namespace test
             _userId = Convert.ToInt32(list[2].ElementAt(userlist.SelectedIndex));
             _class=Convert.ToInt32(list[3].ElementAt(userlist.SelectedIndex));
             _homework = Convert.ToInt32(list[4].ElementAt(userlist.SelectedIndex));
-            makeClassWord m = new makeClassWord(this,userlist.SelectedItem.ToString(),_userId,_class);
+            makeClassWord m = new makeClassWord(this,userlist.SelectedItem.ToString(),_userId,_class,0);
             m.Show();
             this.Dispose();
         }
@@ -80,9 +80,19 @@ namespace test
         {
 
             _userId = Convert.ToInt32(list[2].ElementAt(userlist.SelectedIndex));
-            game g = new game(_userId,this);
+            game g = new game(_userId,this,0);
            g.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _userId = Convert.ToInt32(list[2].ElementAt(userlist.SelectedIndex));
+            _class = Convert.ToInt32(list[3].ElementAt(userlist.SelectedIndex));
+            _homework = Convert.ToInt32(list[4].ElementAt(userlist.SelectedIndex));
+            makeClassWord m = new makeClassWord(this, userlist.SelectedItem.ToString(), _userId, _homework, 1);
+            m.Show();
+            this.Dispose();
         }
     }
 }

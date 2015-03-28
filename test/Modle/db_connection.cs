@@ -80,7 +80,43 @@ namespace test
         }
         // the int reference what we are look for:
         //0 - means login only return a integer
-       
+        public int getUserId(String user)
+        {
+          
+            string query = "select id from userlist where username='"+user+"';";
+            int ans = -1;
+
+
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlDataReader dataReader = null;
+                dataReader = cmd.ExecuteReader();
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    ans = Convert.ToInt32(dataReader["id"]);
+                }
+
+                //close Data Reader
+                dataReader.Close();
+                //return list to be displayed
+                return ans;
+            }
+            catch
+            {
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+            return -1;
+
+        }
         
         public Object Select(string query, int j)
         {
@@ -321,7 +357,7 @@ namespace test
                 Int32 ans = -5;
                 ans = Convert.ToInt32(cmd.ExecuteScalar());
                
-                query = "UPDATE `safali`.`userlist` SET `class` = '" + classNumber + "' WHERE `userlist`.`id` = " + userId + ";";
+                query = "UPDATE `safali`.`userlist` SET `"+cl+"` = '" + classNumber + "' WHERE `userlist`.`id` = " + userId + ";";
                 conn.Close();
                 conn.Open();
                 cmd = new MySqlCommand(query, conn);
@@ -681,9 +717,14 @@ namespace test
             ms.Close();
             return re;
         }
-        public int getCurrentClass(int userId) 
+        public int getCurrentClass(int userId,int j) 
         {
-            string query = "select class from userlist where id="+userId+"";
+            string cl = "class";
+            if (j ==1)
+            {
+                cl = "homework";
+            }
+            string query = "select " + cl + " from userlist where id=" + userId + "";
             int ans = -1;
 
 
@@ -696,7 +737,7 @@ namespace test
                 //Read the data and store them in the list
                 while (dataReader.Read())
                 {
-                    ans = Convert.ToInt32(dataReader["class"]);
+                    ans = Convert.ToInt32(dataReader[cl]);
                 }
 
                 //close Data Reader
@@ -716,10 +757,13 @@ namespace test
             }
             return -1;
         }
-        public List<string>[] Selectgame(int userid,int classNumber)
+        public List<string>[] Selectgame(int userid,int classNumber,int homework)
         {
+            string cl = "class";
+            if (homework == 1)
+                cl = "homework";
 
-            string query = "SELECT `ClassNumber`,`wordId` FROM `class` WHERE userid='"+userid+"' and ClassNumber='"+classNumber+"' and yesNo='No';";
+            string query = "SELECT `ClassNumber`,`wordId` FROM `class` WHERE userid='"+userid+"' and ClassNumber='"+classNumber+"' and class='"+cl+"' and yesNo='No';";
             List<string>[] list = new List<string>[2];
             list[0] = new List<string>();
             list[1] = new List<string>();

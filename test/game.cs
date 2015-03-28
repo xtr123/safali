@@ -16,16 +16,19 @@ namespace test
         int _currentGame = -1;
         List<string>[] l;
         Form _back;
-        public game(int userId,Form back)
+        int _homework;
+        public game(int userId,Form back,int homework)
         {
+            _homework = homework;
+
             _back = back;
             _userId = userId;
             InitializeComponent();
             
             db_connection k = new db_connection();
-            int j=k.getCurrentClass(_userId);
+            int j=k.getCurrentClass(_userId,_homework);
             db_connection k2 = new db_connection();
-           l=k2.Selectgame(_userId,j);
+           l=k2.Selectgame(_userId,j,_homework);
             if (l[0].Count > 0)
             {
                 _currentGame = l[0].Count-1;
