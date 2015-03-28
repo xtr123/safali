@@ -209,21 +209,24 @@ namespace test
             textBox14.Text + comboBox14.Text;
             bool ans;
             byte[] imageBT = null;
-            FileStream fstream = new FileStream(picpath, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(fstream);
-            imageBT = br.ReadBytes((int)fstream.Length);
+
+            //FileStream fstream = new FileStream(picpath, FileMode.Open, FileAccess.Read);
+           // BinaryReader br = new BinaryReader(fstream);
+            //imageBT = br.ReadBytes((int)fstream.Length);
+            ImageConverter converter = new ImageConverter();
+           imageBT= (byte[])converter.ConvertTo(pictureBox1.Image, typeof(byte[]));
+           im = imageBT;
             try
             {
-                milaAlgo m = new milaAlgo(word);
-                string nos = "" + m.MisparHavarot();
-                string oc = "";
-                if (m._havaraPtuha.Equals("") && !m._havaraSgura.Equals(""))
-                {
-                    oc = "Open";
-                }
-                else oc = "Close";
+                //milaAlgo m = new milaAlgo(word);
+                string nos =  NumOfSyl.Text;
+                string oc = openSyl.Text;
+               
                 db_connection k = new db_connection();
-                ans = k.insert_word(word, nos, oc, comboBox15.Text, comboBox16.Text, comboBox17.Text, comboBox18.Text, comboBox19.Text, comboBox20.Text, im);
+                ans = k.delword(word);
+                db_connection k1 = new db_connection();
+                
+                ans = k1.insert_word(word, nos, oc, comboBox15.Text, comboBox16.Text, comboBox17.Text, comboBox18.Text, comboBox19.Text, comboBox20.Text, im);
 
                 if (ans)
                 {
@@ -401,6 +404,18 @@ namespace test
             {
 
             }
+        }
+
+        private void openSyl_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numOfSyllable_Button_Click(object sender, EventArgs e)
+        {
+            milaAlgo m = new milaAlgo(comboBox21.Text);
+            NumOfSyl.Text = m.MisparHavarot()+"";
+            openSyl.Text=(m._havaraPtuha)?"Open":"Close";
         }
     }
 }

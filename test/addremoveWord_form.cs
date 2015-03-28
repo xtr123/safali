@@ -11,6 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Drawing.Drawing2D;
+
+
 namespace test
 {
     public partial class addremoveWord_form : Form
@@ -339,6 +342,7 @@ namespace test
                     comboBox18.ResetText();
                     comboBox19.ResetText();
                     comboBox20.ResetText();
+                    word = "";
 
                 }
                 else if (dialogResult == DialogResult.No)
@@ -348,7 +352,6 @@ namespace test
                 }
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog res = new OpenFileDialog();
@@ -363,6 +366,7 @@ namespace test
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 MemoryStream ms = new MemoryStream();
                 pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+
                 im = ms.GetBuffer();
                 picpath = res.FileName.ToString();
                 

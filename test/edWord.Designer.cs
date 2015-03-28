@@ -430,6 +430,7 @@
             this.numOfSyllable_Button.TabIndex = 30;
             this.numOfSyllable_Button.Text = "כמות הברות";
             this.numOfSyllable_Button.UseVisualStyleBackColor = true;
+            this.numOfSyllable_Button.Click += new System.EventHandler(this.numOfSyllable_Button_Click);
             // 
             // openSyl
             // 
@@ -439,6 +440,7 @@
             this.openSyl.Size = new System.Drawing.Size(99, 38);
             this.openSyl.TabIndex = 31;
             this.openSyl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.openSyl.TextChanged += new System.EventHandler(this.openSyl_TextChanged);
             // 
             // ClodeSyl
             // 
