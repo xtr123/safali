@@ -89,7 +89,7 @@
             this.okButton = new System.Windows.Forms.Button();
             this.comboBox21 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.delbutton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -772,16 +772,16 @@
             this.label10.TabIndex = 61;
             this.label10.Text = "בחירת מילה לעריכה:";
             // 
-            // button2
+            // delbutton
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button2.Location = new System.Drawing.Point(79, 109);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 39);
-            this.button2.TabIndex = 62;
-            this.button2.Text = "מחיקת מילה";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.delbutton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.delbutton.Location = new System.Drawing.Point(79, 109);
+            this.delbutton.Name = "delbutton";
+            this.delbutton.Size = new System.Drawing.Size(137, 39);
+            this.delbutton.TabIndex = 62;
+            this.delbutton.Text = "מחיקת מילה";
+            this.delbutton.UseVisualStyleBackColor = true;
+            this.delbutton.Click += new System.EventHandler(this.button2_Click);
             // 
             // edWord_form
             // 
@@ -789,7 +789,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(891, 681);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.delbutton);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBox21);
             this.Controls.Add(this.label9);
@@ -924,7 +924,7 @@
         private System.Windows.Forms.ComboBox comboBox15;
         private System.Windows.Forms.ComboBox comboBox21;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button delbutton;
 
 
     }

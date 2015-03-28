@@ -120,7 +120,7 @@ namespace test
                 MessageBox.Show("רק אותיות בעברית");
                 textBox1.Text = "";
             } 
-         
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -130,7 +130,7 @@ namespace test
             {
                 MessageBox.Show("רק אותיות בעברית");
                 textBox2.Text = "";
-            } 
+        }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -140,7 +140,7 @@ namespace test
             {
                 MessageBox.Show("רק אותיות בעברית");
                 textBox3.Text = "";
-            } 
+        }
         }
 
         private void textBox14_TextChanged(object sender, EventArgs e)
@@ -191,7 +191,7 @@ namespace test
             {
                 MessageBox.Show("רק אותיות בעברית");
                 textBox9.Text = "";
-            } 
+        }
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
@@ -201,7 +201,7 @@ namespace test
             {
                 MessageBox.Show("רק אותיות בעברית");
                 textBox8.Text = "";
-            } 
+        }
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
@@ -212,7 +212,7 @@ namespace test
             {
                 MessageBox.Show("רק אותיות בעברית");
                 textBox7.Text = "";
-            } 
+        }
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -223,7 +223,7 @@ namespace test
             {
                 MessageBox.Show("רק אותיות בעברית");
                 textBox6.Text = "";
-            } 
+        }
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -261,73 +261,91 @@ namespace test
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            if (picpath != "") { 
-            byte[] imageBT = null;
-            FileStream fstream = new FileStream(picpath, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(fstream);
-            imageBT = br.ReadBytes((int)fstream.Length);
-            
-            try
+            if (picpath == null || picpath == "")
             {
-                milaAlgo m = new milaAlgo(word);
-                string nos = "" + m.MisparHavarot();
-                string oc = "";
-                if (m._havaraPtuha.Equals("") && !m._havaraSgura.Equals(""))
-                {
-                    oc = "Open";
-                }
-                else oc = "Close";
-                db_connection k = new db_connection();
-                bool ans = k.insert_word(word, nos, oc, comboBox15.Text, comboBox16.Text, comboBox17.Text, comboBox18.Text, comboBox19.Text, comboBox20.Text, im);
-
-                if (ans)
-                {
-                    MessageBox.Show("Insert");
-                }
-                else
-                {
-                    MessageBox.Show("Not insert");
-                }
-            }
-            catch { }
-            DialogResult dialogResult = MessageBox.Show("להכניס מילה נוספת?", "הוספת מילה", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                NumOfSyl.ResetText();
-                ClodeSyl.ResetText();
-                openSyl.ResetText();
-                pictureBox1.Image = null;
-                comboBox1.ResetText(); textBox1.ResetText();
-                comboBox2.ResetText(); textBox2.ResetText();
-                comboBox3.ResetText(); textBox3.ResetText();
-                comboBox4.ResetText(); textBox4.ResetText();
-                comboBox5.ResetText(); textBox5.ResetText();
-                comboBox6.ResetText(); textBox6.ResetText();
-                comboBox7.ResetText(); textBox7.ResetText();
-                comboBox8.ResetText(); textBox8.ResetText();
-                comboBox9.ResetText(); textBox9.ResetText();
-                comboBox10.ResetText(); textBox10.ResetText();
-                comboBox11.ResetText(); textBox11.ResetText();
-                comboBox12.ResetText(); textBox12.ResetText();
-                comboBox13.ResetText(); textBox13.ResetText();
-                comboBox14.ResetText(); textBox14.ResetText();
-                comboBox15.ResetText();
-                comboBox16.ResetText();
-                comboBox17.ResetText();
-                comboBox18.ResetText();
-                comboBox19.ResetText();
-                comboBox20.ResetText();
-
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                _back.Show();
-                this.Dispose();
-            }
+                MessageBox.Show("לא נבחרה תמונה");
             }
             else
             {
-                MessageBox.Show("אין תמונה");
+                byte[] imageBT = null;
+                FileStream fstream = new FileStream(picpath, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fstream);
+                imageBT = br.ReadBytes((int)fstream.Length);
+                if (word == null || word.Length == 0)
+                {
+                    word =
+                    textBox1.Text + comboBox1.Text +
+                    textBox2.Text + comboBox2.Text +
+                    textBox3.Text + comboBox3.Text +
+                    textBox4.Text + comboBox4.Text +
+                    textBox5.Text + comboBox5.Text +
+                    textBox6.Text + comboBox6.Text +
+                    textBox7.Text + comboBox7.Text +
+                    textBox8.Text + comboBox8.Text +
+                    textBox9.Text + comboBox9.Text +
+                    textBox10.Text + comboBox10.Text +
+                    textBox11.Text + comboBox11.Text +
+                    textBox12.Text + comboBox12.Text +
+                    textBox13.Text + comboBox13.Text +
+                    textBox14.Text + comboBox14.Text;
+                }
+                try
+                {
+                    milaAlgo m = new milaAlgo(word);
+                    string nos = "" + m.MisparHavarot();
+                    string oc = "";
+                    if (m._havaraPtuha.Equals("") && !m._havaraSgura.Equals(""))
+                    {
+                        oc = "Open";
+                    }
+                    else oc = "Close";
+                    db_connection k = new db_connection();
+                    bool ans = k.insert_word(word, nos, oc, comboBox15.Text, comboBox16.Text, comboBox17.Text, comboBox18.Text, comboBox19.Text, comboBox20.Text, im);
+
+                    if (ans)
+                    {
+                        MessageBox.Show("Insert");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not insert");
+                    }
+                }
+                catch { }
+                DialogResult dialogResult = MessageBox.Show("להכניס מילה נוספת?", "הוספת מילה", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    NumOfSyl.ResetText();
+                    ClodeSyl.ResetText();
+                    openSyl.ResetText();
+                    pictureBox1.Image = null;
+                    comboBox1.ResetText(); textBox1.ResetText();
+                    comboBox2.ResetText(); textBox2.ResetText();
+                    comboBox3.ResetText(); textBox3.ResetText();
+                    comboBox4.ResetText(); textBox4.ResetText();
+                    comboBox5.ResetText(); textBox5.ResetText();
+                    comboBox6.ResetText(); textBox6.ResetText();
+                    comboBox7.ResetText(); textBox7.ResetText();
+                    comboBox8.ResetText(); textBox8.ResetText();
+                    comboBox9.ResetText(); textBox9.ResetText();
+                    comboBox10.ResetText(); textBox10.ResetText();
+                    comboBox11.ResetText(); textBox11.ResetText();
+                    comboBox12.ResetText(); textBox12.ResetText();
+                    comboBox13.ResetText(); textBox13.ResetText();
+                    comboBox14.ResetText(); textBox14.ResetText();
+                    comboBox15.ResetText();
+                    comboBox16.ResetText();
+                    comboBox17.ResetText();
+                    comboBox18.ResetText();
+                    comboBox19.ResetText();
+                    comboBox20.ResetText();
+
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    _back.Show();
+                    this.Dispose();
+                }
             }
         }
 
