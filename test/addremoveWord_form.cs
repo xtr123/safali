@@ -183,11 +183,11 @@ namespace test
 
         private void okButton_Click(object sender, EventArgs e)
         {
+            bool ans;
             byte[] imageBT = null;
-            FileStream fstream = new FileStream(picpath, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(fstream);
-            imageBT = br.ReadBytes((int)fstream.Length);
-            
+                FileStream fstream = new FileStream(picpath, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fstream);
+                imageBT = br.ReadBytes((int)fstream.Length);
             try
             {
                 milaAlgo m = new milaAlgo(word);
@@ -199,7 +199,7 @@ namespace test
                 }
                 else oc = "Close";
                 db_connection k = new db_connection();
-                bool ans = k.insert_word(word, nos, oc, comboBox15.Text, comboBox16.Text, comboBox17.Text, comboBox18.Text, comboBox19.Text, comboBox20.Text, im);
+                    ans = k.insert_word(word, nos, oc, comboBox15.Text, comboBox16.Text, comboBox17.Text, comboBox18.Text, comboBox19.Text, comboBox20.Text, im);
 
                 if (ans)
                 {

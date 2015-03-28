@@ -104,7 +104,7 @@
             okButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             okButton.BackgroundImage = global::test.Properties.Resources.dictionary1;
             okButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            okButton.Cursor = System.Windows.Forms.Cursors.No;
+            okButton.Cursor = System.Windows.Forms.Cursors.Hand;
             okButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             okButton.ForeColor = System.Drawing.SystemColors.ControlText;
             okButton.Location = new System.Drawing.Point(685, 543);

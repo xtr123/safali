@@ -387,6 +387,29 @@ namespace test
             return false;
         }
 
+        public bool delword(string w)
+        {
+            try
+            {
+                string query = "DELETE FROM `dictionary` WHERE word='" + w + "';";
+                conn.Open();
+                cmd = new MySqlCommand(query, conn);
+                Int32 ans = -5;
+                ans = Convert.ToInt32(cmd.ExecuteScalar());
+                if (ans != -5)
+                {
+                    MessageBox.Show("Deleted");
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+                return false;
+            }
+            return false;
+        }
+
         public string[] getWordData(string word1,PictureBox pb)
         {
             string[] arr = new string[11];
