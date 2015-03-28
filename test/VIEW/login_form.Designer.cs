@@ -165,6 +165,7 @@
             this.RightToLeftLayout = true;
             this.ShowIcon = false;
             this.Text = "שפה - לי";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.loginForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

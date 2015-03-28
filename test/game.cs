@@ -21,7 +21,7 @@ namespace test
             _back = back;
             _userId = userId;
             InitializeComponent();
-            _currentGame = 0;
+            
             db_connection k = new db_connection();
             int j=k.getCurrentClass(_userId);
             db_connection k2 = new db_connection();
