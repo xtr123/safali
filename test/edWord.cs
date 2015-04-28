@@ -226,7 +226,7 @@ namespace test
                 ans = k.delword(word);
                 db_connection k1 = new db_connection();
                 
-                ans = k1.insert_word(word, nos, oc, comboBox15.Text, comboBox16.Text, comboBox17.Text, comboBox18.Text, comboBox19.Text, comboBox20.Text, im);
+                //ans = k1.insert_word(word, nos, havara1, comboBox15.Text, comboBox16.Text, comboBox17.Text, comboBox18.Text, comboBox19.Text, comboBox20.Text, im);
 
                 if (ans)
                 {

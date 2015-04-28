@@ -109,6 +109,13 @@
     <Compile Include="selectWord.Designer.cs">
       <DependentUpon>selectWord.cs</DependentUpon>
     </Compile>
+    <Compile Include="sylOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sylOptions.Designer.cs">
+      <DependentUpon>sylOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sylOptionsClass.cs" />
     <Compile Include="VIEW\login_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="selectWord.resx">
       <DependentUpon>selectWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sylOptions.resx">
+      <DependentUpon>sylOptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\login_form.resx">
       <DependentUpon>login_form.cs</DependentUpon>

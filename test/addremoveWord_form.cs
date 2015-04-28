@@ -18,9 +18,15 @@ namespace test
 {
     public partial class addremoveWord_form : Form
     {
+        sylOptionsClass havara1=new sylOptionsClass();
+        sylOptionsClass havara2 = new sylOptionsClass();
+        sylOptionsClass havara3 = new sylOptionsClass();
+        sylOptionsClass havara4 = new sylOptionsClass();
+
         Form _back;
         string[] nikud = { "", "\u05B0", "\u05B1", "\u05B2", "\u05B3", "\u05B4", "\u05B5", "\u05B6", "\u05B7", "\u05B8", "\u05B9", "\u05BB", "\u05BC", "ש\u05C1", "ש\u05C2" };
         string word = "";
+        string word_no_nikud="";
         byte[] im;
         string picpath = "";
         // string im;
@@ -291,7 +297,23 @@ namespace test
                     textBox12.Text + comboBox12.Text +
                     textBox13.Text + comboBox13.Text +
                     textBox14.Text + comboBox14.Text;
+                    word_no_nikud =
+                        textBox1.Text +
+                        textBox2.Text +
+                        textBox3.Text +
+                        textBox4.Text +
+                        textBox5.Text +
+                        textBox6.Text +
+                        textBox7.Text +
+                        textBox8.Text +
+                        textBox9.Text +
+                        textBox10.Text +
+                        textBox11.Text +
+                        textBox12.Text +
+                        textBox13.Text +
+                        textBox14.Text ;
                 }
+                
                 try
                 {
                     milaAlgo m = new milaAlgo(word);
@@ -303,8 +325,8 @@ namespace test
                     }
                     else oc = "Close";
                     db_connection k = new db_connection();
-                    bool ans = k.insert_word(word, nos, oc, comboBox15.Text, comboBox16.Text, comboBox17.Text, comboBox18.Text, comboBox19.Text, comboBox20.Text, im);
-
+                    
+                    bool ans = k.insert_word(word, nos, havara1, havara2, havara3, havara4, comboBox18.Text, comboBox19.Text, "", im,word_no_nikud);
                     if (ans)
                     {
                         MessageBox.Show("Insert");
@@ -319,8 +341,6 @@ namespace test
                 if (dialogResult == DialogResult.Yes)
                 {
                     NumOfSyl.ResetText();
-                    ClodeSyl.ResetText();
-                    openSyl.ResetText();
                     pictureBox1.Image = null;
                     comboBox1.ResetText(); textBox1.ResetText();
                     comboBox2.ResetText(); textBox2.ResetText();
@@ -336,12 +356,8 @@ namespace test
                     comboBox12.ResetText(); textBox12.ResetText();
                     comboBox13.ResetText(); textBox13.ResetText();
                     comboBox14.ResetText(); textBox14.ResetText();
-                    comboBox15.ResetText();
-                    comboBox16.ResetText();
-                    comboBox17.ResetText();
                     comboBox18.ResetText();
                     comboBox19.ResetText();
-                    comboBox20.ResetText();
                     word = "";
 
                 }
@@ -418,7 +434,7 @@ namespace test
         {
         }
 
-        private void numOfSyllable_Button_Click(object sender, EventArgs e)
+       /* private void numOfSyllable_Button_Click(object sender, EventArgs e)
         {
             word =
                 textBox1.Text + comboBox1.Text +
@@ -449,7 +465,7 @@ namespace test
             }
             //MessageBox.Show(m.MisparHavarot() + " Ptucha: " + m._havaraPtuha + " Sgura: " + m._havaraSgura);
         }
-
+        */
         private void NumOfSyl_TextChanged(object sender, EventArgs e)
         {
 
@@ -513,6 +529,48 @@ namespace test
         {
             _back.Show();
             this.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int i = 1;
+            sylOptions k = new sylOptions(this,i);
+            if (i <= Convert.ToInt32(NumOfSyl.Text)) {
+                if (k.ShowDialog(this) == DialogResult.OK)
+            {
+                havara1 = k.Foo();
+            }
+            }
+            i++;
+            sylOptions k2 = new sylOptions(this, i);
+            if (i <= Convert.ToInt32(NumOfSyl.Text))
+            {
+                if (k2.ShowDialog(this) == DialogResult.OK)
+                {
+                    havara2 = k2.Foo();
+                }
+            }
+            i++;
+            sylOptions k3 = new sylOptions(this, i);
+            if (i <= Convert.ToInt32(NumOfSyl.Text))
+            {
+                if (k3.ShowDialog(this) == DialogResult.OK)
+                {
+                    havara3 = k3.Foo();
+                }
+            }
+            i++;
+            sylOptions k4 = new sylOptions(this, i);
+            if (i <= Convert.ToInt32(NumOfSyl.Text))
+            {
+                if (k4.ShowDialog(this) == DialogResult.OK)
+                {
+                    havara4 = k4.Foo();
+                }
+            }
+
+           
+
         }
     }
 }

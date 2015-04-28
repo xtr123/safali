@@ -28,7 +28,7 @@ namespace test
         //Empty Constractor - defualt param
         public db_connection()
         {
-            _server = "10.0.0.14";
+            _server = "10.0.0.30";
             //_server = "10.0.0.3";
           //  _server = "10.0.0.6";
             //_userId = "root";
@@ -674,14 +674,18 @@ namespace test
                 }
             }
         }
-
+        
         ////////////////////////////////
-        public bool insert_word(string word, string nos, string oc,string puc,string agaia,string koliut, string atama, string diber,string t_p,byte[] im)
+        public bool insert_word(string word, string nos,sylOptionsClass h1,sylOptionsClass h2,sylOptionsClass h3,sylOptionsClass h4, string atama, string diber,string t_p,byte[] im,string nonikud)
         {
+        //NOS = Number of Syl
             try
             {
                // string query = "INSERT INTO `dictionary` (`word`, `syllable`, `openClose`,`p_cut`,`agia`,`koliut`, `atama`,`diber`, `tzlil_place`) VALUES ('" + word + "','" + nos + "','" + oc + "','" + puc + "','" + agaia + "','" + koliut + "','" + atama + "','" + diber + "','" + t_p + "');";
-                string query = "INSERT INTO `dictionary` (`word`,`syllable`,`openClose`,`p_cut`,`agaia`,`koliut`,`atama`,`diber`,`tzlil_place`,`pic`) VALUES ('" + word + "','" + nos + "','" + oc + "','" + puc + "','" + agaia + "','" + koliut + "','" + atama + "','" + diber + "','" + t_p + "',@IMG);";
+                string query = "INSERT INTO `dictionary` (`word`,`syllable`,`openClose1`,`p_cut1`,`agaia1`,`koliut1`,`atama`,`diber`,`tzlil_place`,`pic`,`openClose2`, `openClose3`, `openClose4`, `p_cut2`, `p_cut3`, `p_cut4`, `agaia2`, `agaia3`, `agaia4`, `koliut2`, `koliut3`, `koliut4`, `noNikud`) VALUES ('" + word + "','" + nos + "','" + h1._openClose + "','" + h1._p_cut + "','" + h1._agia + "','" + h1._koliot + "','" + atama + "','" + diber + "','" + t_p + "',@IMG,'" + h2._openClose + "','" + h3._openClose + "','" + h4._openClose + "','" + h2._p_cut + "','" + h3._p_cut + "','" + h4._p_cut + "','" + h2._agia + "','" + h3._agia + "','" + h4._agia + "','" + h2._koliot + "','" + h3._koliot + "','" + h4._koliot + "','" + nonikud + "');";
+                
+                
+                
                 conn.Open();
                 
                 Int32 ans = -5;
