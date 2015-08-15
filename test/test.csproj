@@ -37,6 +37,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -207,6 +208,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Pics\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pics\logo.png" />
+    <None Include="Resources\031118_143727-1933_פו עם בלון.bmp" />
+    <None Include="Resources\2858291_18.gif" />
+    <None Include="Resources\spaceship.png" />
+    <None Include="Resources\play.jpg" />
+    <None Include="Resources\hw11.jpg" />
+    <None Include="Resources\hw1.jpg" />
+    <None Include="Resources\hw.jpg" />
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

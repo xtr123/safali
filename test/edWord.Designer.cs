@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -57,25 +56,11 @@
             this.comboBox12 = new System.Windows.Forms.ComboBox();
             this.comboBox13 = new System.Windows.Forms.ComboBox();
             this.comboBox14 = new System.Windows.Forms.ComboBox();
-            this.NumOfSyl = new System.Windows.Forms.TextBox();
-            this.numOfSyllable_Button = new System.Windows.Forms.Button();
-            this.openSyl = new System.Windows.Forms.TextBox();
-            this.ClodeSyl = new System.Windows.Forms.TextBox();
-            this.Open_label = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
             this.comboBox18 = new System.Windows.Forms.ComboBox();
             this.comboBox19 = new System.Windows.Forms.ComboBox();
-            this.comboBox20 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -90,33 +75,19 @@
             this.comboBox21 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.delbutton = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Open_label = new System.Windows.Forms.Label();
+            this.NumOfSyl = new System.Windows.Forms.TextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
-            // 
-            // comboBox15
-            // 
-            this.comboBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Items.AddRange(new object[] {
-            "גרון",
-            "חיך",
-            "שפתיים",
-            "לשון",
-            "שיניים",
-            "שפתיים + שיניים"});
-            this.comboBox15.Location = new System.Drawing.Point(7, 43);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(161, 35);
-            this.comboBox15.TabIndex = 37;
-            this.comboBox15.SelectedIndexChanged += new System.EventHandler(this.comboBox15_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -412,67 +383,6 @@
             this.comboBox14.TabIndex = 26;
             this.comboBox14.SelectedIndexChanged += new System.EventHandler(this.comboBox14_SelectedIndexChanged);
             // 
-            // NumOfSyl
-            // 
-            this.NumOfSyl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.NumOfSyl.Location = new System.Drawing.Point(657, 286);
-            this.NumOfSyl.Name = "NumOfSyl";
-            this.NumOfSyl.Size = new System.Drawing.Size(59, 38);
-            this.NumOfSyl.TabIndex = 29;
-            this.NumOfSyl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // numOfSyllable_Button
-            // 
-            this.numOfSyllable_Button.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.numOfSyllable_Button.Location = new System.Drawing.Point(722, 285);
-            this.numOfSyllable_Button.Name = "numOfSyllable_Button";
-            this.numOfSyllable_Button.Size = new System.Drawing.Size(136, 44);
-            this.numOfSyllable_Button.TabIndex = 30;
-            this.numOfSyllable_Button.Text = "כמות הברות";
-            this.numOfSyllable_Button.UseVisualStyleBackColor = true;
-            this.numOfSyllable_Button.Click += new System.EventHandler(this.numOfSyllable_Button_Click);
-            // 
-            // openSyl
-            // 
-            this.openSyl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.openSyl.Location = new System.Drawing.Point(484, 286);
-            this.openSyl.Name = "openSyl";
-            this.openSyl.Size = new System.Drawing.Size(99, 38);
-            this.openSyl.TabIndex = 31;
-            this.openSyl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.openSyl.TextChanged += new System.EventHandler(this.openSyl_TextChanged);
-            // 
-            // ClodeSyl
-            // 
-            this.ClodeSyl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ClodeSyl.Location = new System.Drawing.Point(317, 286);
-            this.ClodeSyl.Name = "ClodeSyl";
-            this.ClodeSyl.Size = new System.Drawing.Size(96, 38);
-            this.ClodeSyl.TabIndex = 32;
-            this.ClodeSyl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Open_label
-            // 
-            this.Open_label.AutoSize = true;
-            this.Open_label.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Open_label.Location = new System.Drawing.Point(589, 295);
-            this.Open_label.Name = "Open_label";
-            this.Open_label.Size = new System.Drawing.Size(62, 23);
-            this.Open_label.TabIndex = 33;
-            this.Open_label.Text = ":פתוחה";
-            this.Open_label.Click += new System.EventHandler(this.Open_label_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(419, 295);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 23);
-            this.label1.TabIndex = 34;
-            this.label1.Text = ":סגורה";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
@@ -483,29 +393,6 @@
             this.button1.Text = "הוספת תמונה";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // comboBox16
-            // 
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Items.AddRange(new object[] {
-            "חוכך",
-            "פוצץ"});
-            this.comboBox16.Location = new System.Drawing.Point(7, 88);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(161, 35);
-            this.comboBox16.TabIndex = 38;
-            // 
-            // comboBox17
-            // 
-            this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Items.AddRange(new object[] {
-            "קולי",
-            "אטום",
-            "עיצור נחצי"});
-            this.comboBox17.Location = new System.Drawing.Point(7, 136);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(161, 35);
-            this.comboBox17.TabIndex = 39;
             // 
             // comboBox18
             // 
@@ -531,74 +418,11 @@
             this.comboBox19.Size = new System.Drawing.Size(163, 29);
             this.comboBox19.TabIndex = 41;
             // 
-            // comboBox20
-            // 
-            this.comboBox20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox20.FormattingEnabled = true;
-            this.comboBox20.Items.AddRange(new object[] {
-            "תחילה",
-            "אמצע",
-            "סוף"});
-            this.comboBox20.Location = new System.Drawing.Point(20, 19);
-            this.comboBox20.Name = "comboBox20";
-            this.comboBox20.Size = new System.Drawing.Size(163, 29);
-            this.comboBox20.TabIndex = 42;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.Location = new System.Drawing.Point(174, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 19);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "מקומות חיתך בפה:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label4.Location = new System.Drawing.Point(177, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 19);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "משך הגיה:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label5.Location = new System.Drawing.Point(177, 145);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 19);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "קוליות:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.comboBox15);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox16);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.comboBox17);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 286);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(293, 179);
-            this.groupBox1.TabIndex = 47;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "צליל:";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.comboBox18);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox2.Location = new System.Drawing.Point(17, 473);
+            this.groupBox2.Location = new System.Drawing.Point(19, 297);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox2.Size = new System.Drawing.Size(292, 61);
@@ -610,7 +434,7 @@
             // 
             this.groupBox3.Controls.Add(this.comboBox19);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox3.Location = new System.Drawing.Point(16, 543);
+            this.groupBox3.Location = new System.Drawing.Point(18, 364);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox3.Size = new System.Drawing.Size(293, 60);
@@ -618,18 +442,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "חלק הדיבר:";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.comboBox20);
-            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox4.Location = new System.Drawing.Point(16, 610);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox4.Size = new System.Drawing.Size(293, 60);
-            this.groupBox4.TabIndex = 50;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "מיקום הצליל:";
             // 
             // label2
             // 
@@ -785,12 +597,55 @@
             this.delbutton.UseVisualStyleBackColor = true;
             this.delbutton.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(575, 297);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 65;
+            this.button2.Text = "נתוני הברות";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // Open_label
+            // 
+            this.Open_label.AutoSize = true;
+            this.Open_label.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Open_label.Location = new System.Drawing.Point(759, 299);
+            this.Open_label.Name = "Open_label";
+            this.Open_label.Size = new System.Drawing.Size(104, 23);
+            this.Open_label.TabIndex = 64;
+            this.Open_label.Text = ":כמות הברות";
+            // 
+            // NumOfSyl
+            // 
+            this.NumOfSyl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.NumOfSyl.Location = new System.Drawing.Point(672, 284);
+            this.NumOfSyl.Name = "NumOfSyl";
+            this.NumOfSyl.Size = new System.Drawing.Size(59, 38);
+            this.NumOfSyl.TabIndex = 63;
+            this.NumOfSyl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox5.Image = global::test.Properties.Resources.logo;
+            this.pictureBox5.Location = new System.Drawing.Point(19, 451);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(285, 249);
+            this.pictureBox5.TabIndex = 66;
+            this.pictureBox5.TabStop = false;
+            // 
             // edWord_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(891, 681);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Open_label);
+            this.Controls.Add(this.NumOfSyl);
             this.Controls.Add(this.delbutton);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBox21);
@@ -803,17 +658,9 @@
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Open_label);
-            this.Controls.Add(this.ClodeSyl);
-            this.Controls.Add(this.openSyl);
-            this.Controls.Add(this.numOfSyllable_Button);
-            this.Controls.Add(this.NumOfSyl);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.comboBox13);
             this.Controls.Add(this.comboBox14);
@@ -848,16 +695,14 @@
             this.Text = "עריכת מילה";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.edWord_form_FormClosing);
             this.Load += new System.EventHandler(this.edWord_form_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -893,26 +738,12 @@
         private System.Windows.Forms.ComboBox comboBox12;
         private System.Windows.Forms.ComboBox comboBox13;
         private System.Windows.Forms.ComboBox comboBox14;
-        private System.Windows.Forms.TextBox NumOfSyl;
-        private System.Windows.Forms.Button numOfSyllable_Button;
-        private System.Windows.Forms.TextBox openSyl;
-        private System.Windows.Forms.TextBox ClodeSyl;
-        private System.Windows.Forms.Label Open_label;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox16;
-        private System.Windows.Forms.ComboBox comboBox17;
         private System.Windows.Forms.ComboBox comboBox18;
         private System.Windows.Forms.ComboBox comboBox19;
-        private System.Windows.Forms.ComboBox comboBox20;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -923,10 +754,13 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Button okButton;
-        private System.Windows.Forms.ComboBox comboBox15;
         private System.Windows.Forms.ComboBox comboBox21;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button delbutton;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label Open_label;
+        private System.Windows.Forms.TextBox NumOfSyl;
+        private System.Windows.Forms.PictureBox pictureBox5;
 
 
     }

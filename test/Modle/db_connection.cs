@@ -28,7 +28,7 @@ namespace test
         //Empty Constractor - defualt param
         public db_connection()
         {
-            _server = "10.0.0.30";
+            _server = "10.0.0.20";
             //_server = "10.0.0.3";
           //  _server = "10.0.0.6";
             //_userId = "root";
@@ -465,7 +465,6 @@ namespace test
                 ans = Convert.ToInt32(cmd.ExecuteScalar());
                 if (ans != -5)
                 {
-                    MessageBox.Show("Deleted");
                     return true;
                 }
             }
@@ -479,7 +478,7 @@ namespace test
 
         public string[] getWordData(string word1,PictureBox pb)
         {
-            string[] arr = new string[11];
+            string[] arr = new string[24];
             string query="select * from dictionary where word='"+word1+"';";
             try
             {
@@ -493,16 +492,31 @@ namespace test
                 //Read the data and store them in the list
                 while (dataReader.Read())
                 {
+
                     arr[0] = dataReader["id"] + "";
                     arr[1] = dataReader["word"] + "";
                     arr[2] = dataReader["syllable"] + "";
-                    arr[3] = dataReader["openClose"] + "";
-                    arr[4] = dataReader["p_cut"] + "";
-                    arr[5] = dataReader["agaia"] + "";
-                    arr[6] = dataReader["koliut"] + "";
+                    arr[3] = dataReader["openClose1"] + "";
+                    arr[4] = dataReader["p_cut1"] + "";
+                    arr[5] = dataReader["agaia1"] + "";
+                    arr[6] = dataReader["koliut1"] + "";
                     arr[7] = dataReader["atama"] + "";
                     arr[8] = dataReader["diber"] + "";
                     arr[9] = dataReader["tzlil_place"] + "";
+                    arr[10] = dataReader["pic"] + "";
+                    arr[11] = dataReader["openClose2"] + "";
+                    arr[12] = dataReader["openClose3"] + "";
+                    arr[13] = dataReader["openClose4"] + "";
+                    arr[14] = dataReader["p_cut2"] + "";
+                    arr[15] = dataReader["p_cut3"] + "";
+                    arr[16] = dataReader["p_cut4"] + "";
+                    arr[17] = dataReader["agaia2"] + "";
+                    arr[18] = dataReader["agaia3"] + "";
+                    arr[19] = dataReader["agaia4"] + "";
+                    arr[20] = dataReader["koliut2"] + "";
+                    arr[21] = dataReader["koliut3"] + "";
+                    arr[22] = dataReader["koliut4"] + "";
+                    arr[23] = dataReader["noNikud"] + "";
                     byte[] imgg = (byte[])(dataReader["pic"]);
                     if (imgg == null)
                     {

@@ -220,14 +220,10 @@ namespace test
             {
                 //milaAlgo m = new milaAlgo(word);
                 string nos =  NumOfSyl.Text;
-                string oc = openSyl.Text;
                
                 db_connection k = new db_connection();
                 ans = k.delword(word);
                 db_connection k1 = new db_connection();
-                
-                //ans = k1.insert_word(word, nos, havara1, comboBox15.Text, comboBox16.Text, comboBox17.Text, comboBox18.Text, comboBox19.Text, comboBox20.Text, im);
-
                 if (ans)
                 {
                     MessageBox.Show("Insert");
@@ -354,11 +350,7 @@ namespace test
             }
 
 
-            NumOfSyl.Text = "" + arr[2]; openSyl.Text = arr[3];
-            comboBox15.Text = arr[4]; comboBox16.Text = arr[5];
-            comboBox17.Text = arr[6]; comboBox18.Text = arr[7];
-            comboBox19.Text = arr[8]; comboBox20.Text = arr[9];
-
+        
         }
         public Image Base64ToImage(string base64String)
         {
@@ -415,7 +407,11 @@ namespace test
         {
             milaAlgo m = new milaAlgo(comboBox21.Text);
             NumOfSyl.Text = m.MisparHavarot()+"";
-            openSyl.Text=(m._havaraPtuha)?"Open":"Close";
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
