@@ -21,6 +21,18 @@ namespace test
             InitializeComponent();
             label2.Text = label2.Text + " " + i;
         }
+        public sylOptions(Form back, int i,sylOptionsClass t)
+        {
+
+            _back = back;
+            InitializeComponent();
+            label2.Text = label2.Text + " " + i;
+            comboBox15.Text = t._p_cut;
+            comboBox16.Text = t._agia;
+            comboBox17.Text = t._koliot;
+            comboBox1.Text = t._openClose;
+
+        }
 
         private void label5_Click(object sender, EventArgs e)
         {

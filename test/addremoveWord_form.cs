@@ -317,7 +317,8 @@ namespace test
                 try
                 {
                     milaAlgo m = new milaAlgo(word);
-                    string nos = "" + m.MisparHavarot();
+                    //string nos = "" + m.MisparHavarot();
+                    string nos = NumOfSyl.Text;
                     string oc = "";
                     if (m._havaraPtuha.Equals("") && !m._havaraSgura.Equals(""))
                     {
@@ -535,7 +536,8 @@ namespace test
         {
             int i = 1;
             sylOptions k = new sylOptions(this,i);
-            if (i <= Convert.ToInt32(NumOfSyl.Text)) {
+            if (NumOfSyl.Text != "" && i <= Convert.ToInt32(NumOfSyl.Text))
+            {
                 if (k.ShowDialog(this) == DialogResult.OK)
             {
                 havara1 = k.Foo();
@@ -543,7 +545,7 @@ namespace test
             }
             i++;
             sylOptions k2 = new sylOptions(this, i);
-            if (i <= Convert.ToInt32(NumOfSyl.Text))
+            if (NumOfSyl.Text != "" && i <= Convert.ToInt32(NumOfSyl.Text))
             {
                 if (k2.ShowDialog(this) == DialogResult.OK)
                 {
@@ -552,7 +554,7 @@ namespace test
             }
             i++;
             sylOptions k3 = new sylOptions(this, i);
-            if (i <= Convert.ToInt32(NumOfSyl.Text))
+            if (NumOfSyl.Text != "" &&  i <= Convert.ToInt32(NumOfSyl.Text))
             {
                 if (k3.ShowDialog(this) == DialogResult.OK)
                 {
@@ -561,7 +563,7 @@ namespace test
             }
             i++;
             sylOptions k4 = new sylOptions(this, i);
-            if (i <= Convert.ToInt32(NumOfSyl.Text))
+            if (NumOfSyl.Text != "" &&  i <= Convert.ToInt32(NumOfSyl.Text))
             {
                 if (k4.ShowDialog(this) == DialogResult.OK)
                 {

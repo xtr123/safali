@@ -15,6 +15,11 @@ namespace test
 {
     public partial class edWord_form : Form
     {
+        sylOptionsClass havara1 = new sylOptionsClass();
+        sylOptionsClass havara2 = new sylOptionsClass();
+        sylOptionsClass havara3 = new sylOptionsClass();
+        sylOptionsClass havara4 = new sylOptionsClass();
+
         string _id;
         List<string>[] list = new List<string>[3];
         Form _back;
@@ -207,6 +212,22 @@ namespace test
             textBox12.Text + comboBox12.Text +
             textBox13.Text + comboBox13.Text +
             textBox14.Text + comboBox14.Text;
+            string word_no_nikud="";
+            word_no_nikud =
+                      textBox1.Text +
+                      textBox2.Text +
+                      textBox3.Text +
+                      textBox4.Text +
+                      textBox5.Text +
+                      textBox6.Text +
+                      textBox7.Text +
+                      textBox8.Text +
+                      textBox9.Text +
+                      textBox10.Text +
+                      textBox11.Text +
+                      textBox12.Text +
+                      textBox13.Text +
+                      textBox14.Text;
             bool ans;
             byte[] imageBT = null;
 
@@ -226,7 +247,11 @@ namespace test
                 db_connection k1 = new db_connection();
                 if (ans)
                 {
-                    MessageBox.Show("Insert");
+                   bool  ans2 = k1.insert_word(word, nos, havara1, havara2, havara3, havara4, comboBox18.Text, comboBox19.Text, "", im, word_no_nikud);
+                    if (ans2)
+                    {
+                        MessageBox.Show("Insert");
+                    }
                 }
                 else
                 {
@@ -309,7 +334,7 @@ namespace test
             string word = arr[1];
             string w = "";
             string nikud = "";
-            int[] count = new int[14];
+            int[] count = new int[24];
             for (int i = 0; i < 14; i++) count[i] = -1;
             int Textb = 1;
             int Comb = 1;
@@ -348,6 +373,14 @@ namespace test
                 }
 
             }
+            comboBox18.Text=arr[7];
+            comboBox19.Text=arr[8];
+            NumOfSyl.Text = arr[2];
+            // public sylOptionsClass(string openClose,string p_cut,string agia,string koliot)
+            havara1 = new sylOptionsClass(arr[3], arr[4], arr[5], arr[6]);
+            havara2 = new sylOptionsClass(arr[11], arr[14], arr[17], arr[20]);
+            havara3 = new sylOptionsClass(arr[12], arr[15], arr[18], arr[21]);
+            havara4 = new sylOptionsClass(arr[13], arr[16], arr[19], arr[22]);
 
 
         
@@ -411,7 +444,45 @@ namespace test
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            int i = 1;
+            sylOptions k = new sylOptions(this,i,havara1);
+            if (NumOfSyl.Text != "" && i <= Convert.ToInt32(NumOfSyl.Text))
+            {
+                if (k.ShowDialog(this) == DialogResult.OK)
+            {
+                havara1 = k.Foo();
+            }
+            }
+            i++;
+            sylOptions k2 = new sylOptions(this, i, havara2);
+            if (NumOfSyl.Text != "" && i <= Convert.ToInt32(NumOfSyl.Text))
+            {
+                if (k2.ShowDialog(this) == DialogResult.OK)
+                {
+                    havara2 = k2.Foo();
+                }
+            }
+            i++;
+            sylOptions k3 = new sylOptions(this, i, havara3);
+            if (NumOfSyl.Text != "" &&  i <= Convert.ToInt32(NumOfSyl.Text))
+            {
+                if (k3.ShowDialog(this) == DialogResult.OK)
+                {
+                    havara3 = k3.Foo();
+                }
+            }
+            i++;
+            sylOptions k4 = new sylOptions(this, i, havara4);
+            if (NumOfSyl.Text != "" &&  i <= Convert.ToInt32(NumOfSyl.Text))
+            {
+                if (k4.ShowDialog(this) == DialogResult.OK)
+                {
+                    havara4 = k4.Foo();
+                }
+            }
+
+           
 
         }
+        }
     }
-}
