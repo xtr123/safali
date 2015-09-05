@@ -49,53 +49,172 @@ namespace test
               _where = _where + " syllable='" +NumOfSyl.Text+ "'";
               f = 1;
             }
-            //openClose
-             if (openSyl.Text != null && openSyl.Text != "") {
-                 string b;
+            //openClose1
+            if (comboBox1.SelectedItem != null && comboBox1.SelectedItem != "")
+            {
+                 
                  if (f == 1)
                  {
                      _where = _where + " AND";
                  }
-                 if (openSyl.Text == "כן")
-                 {
-                     b = "Open";
-                 }
-                 else
-                 {
-                     b = "Close";
-                 }
-                 _where = _where + " openClose='" + b + "'";
+                 _where = _where + " openClose1='" + comboBox1.SelectedItem + "'";
                  f = 1;
             }
-            //p_cut
-             if (comboBox15.SelectedItem != null && comboBox15.SelectedItem != "")
+            //p_cut1
+             if (comboBox2.SelectedItem != null && comboBox2.SelectedItem != "")
              {
                  if (f == 1)
                  {
                      _where = _where + " AND";
                  }
-                 _where = _where + " p_cut='" + comboBox15.SelectedItem + "'";
+                 _where = _where + " p_cut1='" + comboBox2.SelectedItem + "'";
                  f = 1;
              }
-            //agaia
-             if (comboBox16.SelectedItem != null && comboBox16.SelectedItem != "")
+            //agaia1
+             if (comboBox3.SelectedItem != null && comboBox3.SelectedItem != "")
              {
                  if (f == 1)
                  {
                      _where = _where + " AND";
                  }
-                 _where = _where + " agaia='" + comboBox16.SelectedItem + "'";
+                 _where = _where + " agaia1='" + comboBox3.SelectedItem + "'";
                  f = 1;
              }
             
-            //koliut
-             if (comboBox17.SelectedItem != null && comboBox17.SelectedItem != "'")
+            //koliut1
+             if (comboBox4.SelectedItem != null && comboBox4.SelectedItem != "'")
              {
                  if (f == 1)
                  {
                      _where = _where + " AND";
                  }
-                 _where = _where + " koliut='" + comboBox17.SelectedItem + "'";
+                 _where = _where + " koliut1='" + comboBox4.SelectedItem + "'";
+                 f = 1;
+             }
+             //openClose2
+             if (comboBox5.SelectedItem != null && comboBox5.SelectedItem != "")
+             {
+
+                 if (f == 1)
+                 {
+                     _where = _where + " AND";
+                 }
+                 _where = _where + " openClose2='" + comboBox5.SelectedItem + "'";
+                 f = 1;
+             }
+             //p_cut2
+             if (comboBox6.SelectedItem != null && comboBox6.SelectedItem != "")
+             {
+                 if (f == 1)
+                 {
+                     _where = _where + " AND";
+                 }
+                 _where = _where + " p_cut2='" + comboBox6.SelectedItem + "'";
+                 f = 1;
+             }
+             //agaia2
+             if (comboBox7.SelectedItem != null && comboBox7.SelectedItem != "")
+             {
+                 if (f == 1)
+                 {
+                     _where = _where + " AND";
+                 }
+                 _where = _where + " agaia2='" + comboBox7.SelectedItem + "'";
+                 f = 1;
+             }
+
+             //koliut2
+             if (comboBox8.SelectedItem != null && comboBox8.SelectedItem != "'")
+             {
+                 if (f == 1)
+                 {
+                     _where = _where + " AND";
+                 }
+                 _where = _where + " koliut2='" + comboBox8.SelectedItem + "'";
+                 f = 1;
+             }
+             //openClose3
+             if (comboBox13.SelectedItem != null && comboBox13.SelectedItem != "")
+             {
+
+                 if (f == 1)
+                 {
+                     _where = _where + " AND";
+                 }
+                 _where = _where + " openClose3='" + comboBox13.SelectedItem + "'";
+                 f = 1;
+             }
+             //p_cut3
+             if (comboBox14.SelectedItem != null && comboBox14.SelectedItem != "")
+             {
+                 if (f == 1)
+                 {
+                     _where = _where + " AND";
+                 }
+                 _where = _where + " p_cut3='" + comboBox14.SelectedItem + "'";
+                 f = 1;
+             }
+             //agaia3
+             if (comboBox21.SelectedItem != null && comboBox21.SelectedItem != "")
+             {
+                 if (f == 1)
+                 {
+                     _where = _where + " AND";
+                 }
+                 _where = _where + " agaia3='" + comboBox21.SelectedItem + "'";
+                 f = 1;
+             }
+
+             //koliut3
+             if (comboBox22.SelectedItem != null && comboBox22.SelectedItem != "'")
+             {
+                 if (f == 1)
+                 {
+                     _where = _where + " AND";
+                 }
+                 _where = _where + " koliut3='" + comboBox22.SelectedItem + "'";
+                 f = 1;
+             }
+             //openClose4
+             if (comboBox9.SelectedItem != null && comboBox9.SelectedItem != "")
+             {
+
+                 if (f == 1)
+                 {
+                     _where = _where + " AND";
+                 }
+                 _where = _where + " openClose4='" + comboBox9.SelectedItem + "'";
+                 f = 1;
+             }
+             //p_cut4
+             if (comboBox10.SelectedItem != null && comboBox10.SelectedItem != "")
+             {
+                 if (f == 1)
+                 {
+                     _where = _where + " AND";
+                 }
+                 _where = _where + " p_cut4='" + comboBox10.SelectedItem + "'";
+                 f = 1;
+             }
+             //agaia4
+             if (comboBox11.SelectedItem != null && comboBox11.SelectedItem != "")
+             {
+                 if (f == 1)
+                 {
+                     _where = _where + " AND";
+                 }
+                 _where = _where + " agaia4='" + comboBox11.SelectedItem + "'";
+                 f = 1;
+             }
+
+             //koliut4
+             if (comboBox12.SelectedItem != null && comboBox12.SelectedItem != "'")
+             {
+                 if (f == 1)
+                 {
+                     _where = _where + " AND";
+                 }
+                 _where = _where + " koliut4='" + comboBox12.SelectedItem + "'";
                  f = 1;
              }
             //atama
@@ -221,6 +340,31 @@ namespace test
                 }
                 MessageBox.Show(j + "");
             }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox6_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox11_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
