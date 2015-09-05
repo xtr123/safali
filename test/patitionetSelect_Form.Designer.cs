@@ -113,7 +113,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.userlist);
             this.Name = "patitionetSelect_Form";
-            this.Text = "patitionetSelect_Form";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "עולם המשחקים";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.patitionetSelect_Form_FormClosing);
             this.Load += new System.EventHandler(this.patitionetSelect_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

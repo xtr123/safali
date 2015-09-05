@@ -289,6 +289,57 @@ namespace test
                 }
             }
         }
+        public List<string>[] SelectUserNoPaitent()
+        {
+
+            string query = "SELECT * FROM `userlist` WHERE administrator = 'no'";
+            List<string>[] list = new List<string>[5];
+            list[0] = new List<string>();
+            list[1] = new List<string>();
+            list[2] = new List<string>();
+            list[3] = new List<string>();
+            list[4] = new List<string>();
+
+
+            try
+            {
+
+                //Open connection
+                conn.Open();
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = null;
+
+                dataReader = cmd.ExecuteReader();
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    list[0].Add(dataReader["username"] + "");
+                    list[1].Add(dataReader["password"] + "");
+                    list[2].Add(dataReader["id"] + "");
+                    list[3].Add(dataReader["class"] + "");
+                    list[4].Add(dataReader["homework"] + "");
+
+                }
+
+                //close Data Reader
+                dataReader.Close();
+                //return list to be displayed
+                return list;
+            }
+            catch
+            {
+                return list;
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+        }
 
         public bool same_user(string username)
         {

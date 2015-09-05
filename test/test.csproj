@@ -211,6 +211,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pics\logo.png" />
+    <None Include="Resources\admin-icon.png" />
+    <None Include="Resources\System-Registry-48x48.png" />
+    <None Include="Resources\edit_word.png" />
+    <None Include="Resources\details.png" />
+    <None Include="Resources\add_remove user.png" />
+    <None Include="Resources\penguine1.png" />
+    <None Include="Resources\penguine.png" />
+    <None Include="Resources\Penguin_student_by_mimooh.png" />
+    <None Include="Resources\safa-li- logo 1.png" />
     <None Include="Resources\031118_143727-1933_פו עם בלון.bmp" />
     <None Include="Resources\2858291_18.gif" />
     <None Include="Resources\spaceship.png" />

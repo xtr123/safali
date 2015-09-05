@@ -133,8 +133,8 @@ namespace test
 
         private void loginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Dispose();
-            
+                // Console app
+                System.Environment.Exit(1);
         }
     }
 }

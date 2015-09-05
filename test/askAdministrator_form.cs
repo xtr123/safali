@@ -43,7 +43,9 @@ namespace test
                 k.Show();
                 this.Dispose();
             }
+            else { 
             _back.Show();
+            }
             this.Dispose();
         }
     }

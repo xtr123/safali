@@ -18,14 +18,14 @@ namespace test
         {
             _back = back;
             _name = name;
-         
+
             InitializeComponent();
         }
 
         private void administratorMain_Panle_Load(object sender, EventArgs e)
         {
-            string tmp = "ברוך הבא";
-              titleLable.Text = _name +" "+ tmp;
+            string tmp = "ברוך הבא,";
+            titleLable.Text = tmp +" " + _name;
         }
 
         private void addRemoveUser_Click(object sender, EventArgs e)

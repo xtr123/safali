@@ -40,7 +40,7 @@ namespace test
             list[3] = new List<string>();
             list[4] = new List<string>();
 
-            list = k.SelectUser();
+            list = k.SelectUserNoPaitent();
             if (list[0].Count > 0)
             {
                 userlist.DataSource = list[0];
@@ -62,7 +62,9 @@ namespace test
                 l.Show();
                 this.Dispose();
             }
+            else { 
             _back.Show();
+            }
             this.Dispose();
         }
 
