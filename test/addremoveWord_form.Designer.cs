@@ -65,6 +65,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -73,19 +74,34 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             okButton = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // okButton
+            // 
+            okButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            okButton.BackgroundImage = global::test.Properties.Resources.dictionary1;
+            okButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            okButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            okButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            okButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            okButton.Location = new System.Drawing.Point(685, 543);
+            okButton.Name = "okButton";
+            okButton.Size = new System.Drawing.Size(183, 92);
+            okButton.TabIndex = 28;
+            okButton.Text = "הוספת\r\nהמילה\r\nלמילון";
+            okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            okButton.UseVisualStyleBackColor = false;
+            okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // textBox1
             // 
@@ -484,14 +500,25 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "תמונה:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(352, 284);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 36;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Guttman Stam", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label7.Font = new System.Drawing.Font("Gan CLM", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label7.Location = new System.Drawing.Point(254, 9);
+            this.label7.Location = new System.Drawing.Point(193, 23);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(398, 95);
+            this.label7.Size = new System.Drawing.Size(464, 86);
             this.label7.TabIndex = 56;
             this.label7.Text = "הוספת מילה";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -552,10 +579,11 @@
             // pictureBox5
             // 
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox5.Image = global::test.Properties.Resources.logo;
-            this.pictureBox5.Location = new System.Drawing.Point(13, 392);
+            this.pictureBox5.Image = global::test.Properties.Resources.safa_li__logo_1;
+            this.pictureBox5.Location = new System.Drawing.Point(-34, 418);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(285, 249);
+            this.pictureBox5.Size = new System.Drawing.Size(364, 214);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 61;
             this.pictureBox5.TabStop = false;
             // 
@@ -569,17 +597,6 @@
             this.pictureBox4.TabIndex = 57;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.pictureBox3.Image = global::test.Properties.Resources.לוגו;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(180, 84);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 55;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -590,35 +607,6 @@
             this.pictureBox2.TabIndex = 54;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(352, 284);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // okButton
-            // 
-            okButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            okButton.BackgroundImage = global::test.Properties.Resources.dictionary1;
-            okButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            okButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            okButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            okButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            okButton.Location = new System.Drawing.Point(685, 543);
-            okButton.Name = "okButton";
-            okButton.Size = new System.Drawing.Size(183, 92);
-            okButton.TabIndex = 28;
-            okButton.Text = "הוספת\r\nהמילה\r\nלמילון";
-            okButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            okButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            okButton.UseVisualStyleBackColor = false;
-            okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // addremoveWord_form
             // 
@@ -632,7 +620,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.label6);
@@ -673,16 +660,16 @@
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.Name = "addremoveWord_form";
+            this.ShowIcon = false;
             this.Text = "הוספת מילה";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.addremoveWord_form_FormClosing);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -728,7 +715,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label8;

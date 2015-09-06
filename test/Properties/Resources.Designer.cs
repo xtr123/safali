@@ -243,6 +243,16 @@ namespace test.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pencil {
+            get {
+                object obj = ResourceManager.GetObject("pencil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Penguin_student_by_mimooh {
             get {
                 object obj = ResourceManager.GetObject("Penguin_student_by_mimooh", resourceCulture);
@@ -286,6 +296,16 @@ namespace test.Properties {
         internal static System.Drawing.Bitmap safa_li__logo_1 {
             get {
                 object obj = ResourceManager.GetObject("safa-li- logo 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap safa_li__logo2 {
+            get {
+                object obj = ResourceManager.GetObject("safa-li- logo2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

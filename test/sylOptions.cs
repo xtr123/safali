@@ -64,5 +64,10 @@ namespace test
            this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void sylOptions_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

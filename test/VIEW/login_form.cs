@@ -123,7 +123,7 @@ namespace test
             DialogResult dialogResult = MessageBox.Show("האם אתה בטוח שברצונך לצאת?", "האם לצאת", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                this.Dispose();
+                System.Environment.Exit(1);
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -134,7 +134,16 @@ namespace test
         private void loginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
                 // Console app
+            DialogResult dialogResult = MessageBox.Show("האם אתה בטוח שברצונך לצאת?", "האם לצאת", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
                 System.Environment.Exit(1);
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do nothing!!
+            }
+                
         }
     }
 }

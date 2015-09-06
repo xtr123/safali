@@ -242,13 +242,13 @@ namespace test
         {
 
             string query = "select * from userlist";
-            List<string>[] list = new List<string>[5];
+            List<string>[] list = new List<string>[6];
             list[0] = new List<string>();
             list[1] = new List<string>();
             list[2] = new List<string>();
             list[3] = new List<string>();
             list[4] = new List<string>();
-
+            list[5] = new List<string>();
 
             try
             {
@@ -269,6 +269,7 @@ namespace test
                     list[2].Add(dataReader["id"] + "");
                     list[3].Add(dataReader["class"] + "");
                     list[4].Add(dataReader["homework"] + "");
+                    list[5].Add(dataReader["administrator"] + "");
 
                 }
 
@@ -293,13 +294,13 @@ namespace test
         {
 
             string query = "SELECT * FROM `userlist` WHERE administrator = 'no'";
-            List<string>[] list = new List<string>[5];
+            List<string>[] list = new List<string>[6];
             list[0] = new List<string>();
             list[1] = new List<string>();
             list[2] = new List<string>();
             list[3] = new List<string>();
             list[4] = new List<string>();
-
+            list[5] = new List<string>();
 
             try
             {
@@ -320,6 +321,7 @@ namespace test
                     list[2].Add(dataReader["id"] + "");
                     list[3].Add(dataReader["class"] + "");
                     list[4].Add(dataReader["homework"] + "");
+                    list[5].Add(dataReader["administrator"] + "");
 
                 }
 

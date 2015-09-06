@@ -97,7 +97,14 @@ namespace test
             db_connection k = new db_connection();
 
             bool ans = k.inser_user_details(_id,idNumber.Text,nameAndFamily.Text,gender.Text,age.Text,city.Text,street.Text,homePhone.Text,cellPhone.Text);
-            MessageBox.Show(ans+"");
+            if (ans.Equals(true))
+            {
+                MessageBox.Show("הפרטים עודכנו");
+            }
+            else
+            {
+                MessageBox.Show("שגיאה, הפרטים לא עודכנו, נסה שנית");
+            }
         }
 
         private void backButton_Click(object sender, EventArgs e)

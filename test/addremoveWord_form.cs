@@ -330,11 +330,11 @@ namespace test
                     bool ans = k.insert_word(word, nos, havara1, havara2, havara3, havara4, comboBox18.Text, comboBox19.Text, "", im,word_no_nikud);
                     if (ans)
                     {
-                        MessageBox.Show("Insert");
+                        MessageBox.Show("המילה עודכנה במילון, תודה");
                     }
                     else
                     {
-                        MessageBox.Show("Not insert");
+                        MessageBox.Show("שגיאה, עדכון המילון לא הצליח, נא לנסות שנית");
                     }
                 }
                 catch { }

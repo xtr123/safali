@@ -28,7 +28,7 @@ namespace test
             _userName = name;
             _userId = userId;
             InitializeComponent();
-            label1.Text = _userName + label1.Text;
+            label1.Text = _userName +"  "+ label1.Text;
             
         }
 
@@ -338,7 +338,14 @@ namespace test
                    j = m.insert_words_to_class(_class, Convert.ToInt32(list[1].ElementAt(list[0].IndexOf(element))), _userId,_classNumber);
                    
                 }
-                MessageBox.Show(j + "");
+                if (j.Equals(true))
+                {
+                    MessageBox.Show("שיעור נוסף בהצלחה");
+                }
+                else
+                {
+                    MessageBox.Show("שגיאה, נסה ליצור את השיעור מחדש");
+                }
             }
         }
 
@@ -363,6 +370,11 @@ namespace test
         }
 
         private void comboBox11_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

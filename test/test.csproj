@@ -211,6 +211,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pics\logo.png" />
+    <None Include="Resources\safa-li- logo2.png" />
+    <None Include="Resources\pencil1.png" />
     <None Include="Resources\admin-icon.png" />
     <None Include="Resources\System-Registry-48x48.png" />
     <None Include="Resources\edit_word.png" />

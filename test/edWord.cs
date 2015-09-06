@@ -250,12 +250,12 @@ namespace test
                    bool  ans2 = k1.insert_word(word, nos, havara1, havara2, havara3, havara4, comboBox18.Text, comboBox19.Text, "", im, word_no_nikud);
                     if (ans2)
                     {
-                        MessageBox.Show("Insert");
+                        MessageBox.Show("המילה עודכנה במילון, תודה");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Not insert");
+                    MessageBox.Show("שגיאה, עדכון המילה לא הצליח, נא לנסות שנית");
                 }
             }
             catch { }
