@@ -20,7 +20,9 @@ namespace test
         {
           
             InitializeComponent();
-           
+            milaAlgo k = new milaAlgo("אַגָּס");
+            k.MisparHavarot();
+       
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -137,7 +139,7 @@ namespace test
             DialogResult dialogResult = MessageBox.Show("האם אתה בטוח שברצונך לצאת?", "האם לצאת", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                System.Environment.Exit(1);
+                System.Environment.Exit(0);
             }
             else if (dialogResult == DialogResult.No)
             {

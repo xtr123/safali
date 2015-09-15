@@ -24,7 +24,7 @@ namespace test
         sylOptionsClass havara4 = new sylOptionsClass();
 
         Form _back;
-        string[] nikud = { "", "\u05B0", "\u05B1", "\u05B2", "\u05B3", "\u05B4", "\u05B5", "\u05B6", "\u05B7", "\u05B8", "\u05B9", "\u05BB", "\u05BC", "ש\u05C1", "ש\u05C2" };
+        string[] nikud = { "", "א\u05B0", "א\u05B1", "א\u05B2", "א\u05B3", "א\u05B4", "א\u05B5", "א\u05B6", "א\u05B7", "א\u05B8", "א\u05B9", "א\u05BB", "ב\u05BC", "ש\u05C1", "ש\u05C2" };
         string word = "";
         string word_no_nikud="";
         byte[] im;
@@ -573,6 +573,26 @@ namespace test
 
            
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            milaAlgo k = new milaAlgo(
+                    textBox1.Text + comboBox1.Text +
+                    textBox2.Text + comboBox2.Text +
+                    textBox3.Text + comboBox3.Text +
+                    textBox4.Text + comboBox4.Text +
+                    textBox5.Text + comboBox5.Text +
+                    textBox6.Text + comboBox6.Text +
+                    textBox7.Text + comboBox7.Text +
+                    textBox8.Text + comboBox8.Text +
+                    textBox9.Text + comboBox9.Text +
+                    textBox10.Text + comboBox10.Text +
+                    textBox11.Text + comboBox11.Text +
+                    textBox12.Text + comboBox12.Text +
+                    textBox13.Text + comboBox13.Text +
+                    textBox14.Text + comboBox14.Text);
+            NumOfSyl.Text = k.MisparHavarot()+"";
         }
     }
 }

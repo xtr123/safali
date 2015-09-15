@@ -22,47 +22,28 @@ namespace test
         public int MisparHavarot()
         {
             _havarot = 0;
-            int f = 0;
+         
             for (int i = 0; i < _word.Length; i++)
             {
+                Debug.WriteLine(_word.ElementAt(i) + " is: " + (int)_word.ElementAt(i));
+                    
                 if (_word.ElementAt(i) < 'א' || _word.ElementAt(i) > 'ת')
                 {
-                    Debug.WriteLine(_word.ElementAt(i) + " is: " + (int)_word.ElementAt(i));
-                    if (_word.ElementAt(i) == (char)1464 || _word.ElementAt(i) == (char)1461 || _word.ElementAt(i) == (char)1456)
+                    //                      kamatz                                  patach                                  holam                               
+                    if (_word.ElementAt(i) == (char)1464 || _word.ElementAt(i) == (char)1463 || _word.ElementAt(i) == (char)1465 || _word.ElementAt(i) == (char)1461 || _word.ElementAt(i) == (char)1462 || _word.ElementAt(i) == (char)1467 || _word.ElementAt(i) == (char)1460)
                     {
                         _havarot++;
-                        _havaraPtuha = true;
                     }
-                    else
-                    {
-                        if (f == 1)
-                        {
-                            if (_word.ElementAt(i) == (char)1456 || _word.ElementAt(i) == (char)1458 || _word.ElementAt(i) == (char)1459 || _word.ElementAt(i) == (char)1457)
-                            {
-                                _havarot++;
-                                f = 0;
-                                _havaraSgura = true;
-                            }
-
-                       }
-                        else if (f == 0)
-                        {
-                            f = 1;
-                        }
-
-                    }
+                     
                 }
 
 
             }
-
-
-
+            Debug.WriteLine(_havarot);
             return _havarot;
         }
         }
     
-
 
 }
 

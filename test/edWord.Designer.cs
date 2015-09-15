@@ -78,6 +78,7 @@
             this.Open_label = new System.Windows.Forms.Label();
             this.NumOfSyl = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -483,11 +484,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Gan CLM", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.label7.Location = new System.Drawing.Point(199, 11);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(466, 86);
+            this.label7.Size = new System.Drawing.Size(399, 83);
             this.label7.TabIndex = 56;
             this.label7.Text = "עריכת מילה";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -586,7 +587,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(575, 297);
+            this.button2.Location = new System.Drawing.Point(575, 313);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 65;
@@ -624,12 +625,23 @@
             this.pictureBox5.TabIndex = 66;
             this.pictureBox5.TabStop = false;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(575, 284);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 67;
+            this.button3.Text = "כמות הברות";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // edWord_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(891, 681);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Open_label);
@@ -748,6 +760,7 @@
         private System.Windows.Forms.Label Open_label;
         private System.Windows.Forms.TextBox NumOfSyl;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button button3;
 
 
     }
