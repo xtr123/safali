@@ -28,13 +28,14 @@ namespace test
         //Empty Constractor - defualt param
         public db_connection()
         {
-            _server = "localhost";
+         //   _server = "localhost";
             //_server = "10.0.0.3";
           //  _server = "10.0.0.6";
-            _userId = "root";
-             _password = "";
-            //_userId = "safali";
-            //_password = "safali";
+           _server="85.10.205.173";
+            //_userId = "root";
+             //_password = "";
+            _userId = "safali";
+            _password = "safali";
             _database = "safali";
             _charset = "utf8";
             _cs = "server=" + _server + ";userid=" + _userId + ";password=" + _password + ";database=" + _database + ";charset="+_charset+";";
