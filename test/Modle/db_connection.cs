@@ -31,12 +31,12 @@ namespace test
          //   _server = "localhost";
             //_server = "10.0.0.3";
           //  _server = "10.0.0.6";
-           _server="85.10.205.173";
+            _server = "185.28.20.20";
             //_userId = "root";
              //_password = "";
-            _userId = "safali";
-            _password = "safali";
-            _database = "safali";
+            _userId = "u331610833_safal";
+            _password = "safali123";
+            _database = "u331610833_safal";
             _charset = "utf8";
             _cs = "server=" + _server + ";userid=" + _userId + ";password=" + _password + ";database=" + _database + ";charset="+_charset+";";
             try
