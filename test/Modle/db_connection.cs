@@ -365,14 +365,67 @@ namespace test
             conn.Close();
             return false;
         }
-        public bool updateWordInClass(int userid, string wordid, int j)
+        public int getYesorNoNumber(int y,string userid,string wordid,string classnumber)
         {
-            string yesNo="No1";
+            //gets the yes value
+            try { 
+            if (y == 1)
+            {
+                string query =   " SELECT `yes` FROM `class` WHERE `userId` = "+userid+" AND `wordId` = "+wordid+" AND `ClassNumber` = "+classnumber+";";
+                
+                conn.Open();
+                cmd = new MySqlCommand(query, conn);
+                Int32 ans = -5;
+                ans = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Close();
+                    if (ans != -5)
+                {
+                    return ans;
+                }
+                else
+                {
+                    return -1;
+                }
+                }
+            
+                //Gets the No Value
+            else
+            {
+                string query = " SELECT `no` FROM `class` WHERE `userId` = " + userid + " AND `wordId` = " + wordid + " AND `ClassNumber` = " + classnumber + ";";
+                conn.Open();
+                cmd = new MySqlCommand(query, conn);
+                Int32 ans = -5;
+                ans = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Close();
+                if (ans != -5)
+                {
+                   
+                    return ans;
+                }
+                else
+                {
+                    
+                    return -1;
+                }
+            }
+            }
+            catch
+            {
+                conn.Close();
+                return -1;
+            }
+        }
+        public bool updateWordInClass(int userid, string wordid, int j,int classnumber)
+        {
+
+            int a = getYesorNoNumber(j, userid+"", wordid+"", classnumber+"");
+            string yesNo="no";
             if (j == 1)
-                yesNo = "Yes";
+                yesNo = "yes";
+            a++;
              try
             {
-                string query =   "UPDATE class SET yesNO = '"+yesNo+"' WHERE wordid = '"+wordid+"' and userid='"+userid+"';";
+                string query = "UPDATE class SET " + yesNo + " = " + a + " WHERE wordid = " + wordid + " and userid=" + userid + " and classnumber = " + classnumber + ";";
                 conn.Open();
                 cmd = new MySqlCommand(query, conn);
                 Int32 ans = -5;
@@ -403,8 +456,8 @@ namespace test
             }
             try
             {
-               
-                string query = "INSERT INTO `class` (`class`, `wordId`, `userId`, `ClassNumber`, `yesNo`) VALUES ('" +cl+ "','" + wordId + "','" + userId + "','"+classNumber+"','No');";
+
+                string query = "INSERT INTO `class` (`class`, `wordId`, `userId`, `ClassNumber`, `yes` , `no`) VALUES ('" + cl + "','" + wordId + "','" + userId + "','" + classNumber + "','0','0');";
                 conn.Open();
                 cmd = new MySqlCommand(query, conn);
                 Int32 ans = -5;
@@ -715,8 +768,7 @@ namespace test
         }
         public List<string>[] selectWord_withWhere(string where)
         {
-
-            string query = "select * from dictionary" + where;
+            string query = "select * from dictionary" + ((where.Equals(" where;"))?"":where);
             List<string>[] list = new List<string>[10];
             list[0] = new List<string>();
             list[1] = new List<string>();
@@ -849,7 +901,7 @@ namespace test
             if (homework == 1)
                 cl = "homework";
 
-            string query = "SELECT `ClassNumber`,`wordId` FROM `class` WHERE userid='"+userid+"' and ClassNumber='"+classNumber+"' and class='"+cl+"' and yesNo='No';";
+            string query = "SELECT `ClassNumber`,`wordId` FROM `class` WHERE userid='"+userid+"' and ClassNumber='"+classNumber+"' and class='"+cl+"' ;";
             List<string>[] list = new List<string>[2];
             list[0] = new List<string>();
             list[1] = new List<string>();
@@ -870,6 +922,51 @@ namespace test
                 while (dataReader.Read())
                 {
                     list[0].Add(dataReader["wordid"] + "");
+                }
+
+                //close Data Reader
+                dataReader.Close();
+                //return list to be displayed
+                return list;
+            }
+            catch
+            {
+                return list;
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+        }
+        public List<string>[] SelectUserAndGameStatus(int userid) {
+            string query ="SELECT `yes`,`No`,`ClassNumber`,`class` FROM `class` WHERE `userId` = "+userid+";" ;
+            List<string>[] list = new List<string>[4];
+            list[0] = new List<string>();
+            list[1] = new List<string>();
+            list[2] = new List<string>();
+            list[3] = new List<string>();
+            
+            try
+            {
+
+                //Open connection
+                conn.Open();
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = null;
+
+                dataReader = cmd.ExecuteReader();
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    list[0].Add(dataReader["yes"] + "");
+                    list[1].Add(dataReader["no"] + "");
+                    list[2].Add(dataReader["class"] + "");
+                    list[3].Add(dataReader["classnumber"] + "");
                 }
 
                 //close Data Reader

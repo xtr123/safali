@@ -78,6 +78,12 @@
     <Compile Include="askAdministrator_form.Designer.cs">
       <DependentUpon>askAdministrator_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="charts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="charts.Designer.cs">
+      <DependentUpon>charts.cs</DependentUpon>
+    </Compile>
     <Compile Include="edWord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="askAdministrator_form.resx">
       <DependentUpon>askAdministrator_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="charts.resx">
+      <DependentUpon>charts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="edWord.resx">
       <DependentUpon>edWord.cs</DependentUpon>

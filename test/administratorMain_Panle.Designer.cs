@@ -35,6 +35,7 @@
             this.add_remove_Word_button = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.addRemoveUser = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,11 +84,20 @@
             this.addRemoveUser.UseVisualStyleBackColor = true;
             this.addRemoveUser.Click += new System.EventHandler(this.addRemoveUser_Click);
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::test.Properties.Resources.add_remove_user;
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // administratorMain_Panle
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.edit_word);
             this.Controls.Add(this.add_remove_Word_button);
@@ -113,5 +123,6 @@
         private System.Windows.Forms.Button add_remove_Word_button;
         private System.Windows.Forms.Button edit_word;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -17,6 +17,7 @@ namespace test
         List<string>[] l;
         Form _back;
         int _homework;
+        int _classNumber = -1;
         public game(int userId,Form back,int homework)
         {
             _homework = homework;
@@ -26,7 +27,7 @@ namespace test
             InitializeComponent();
             
             db_connection k = new db_connection();
-            int j=k.getCurrentClass(_userId,_homework);
+            int j=_classNumber=k.getCurrentClass(_userId,_homework);
             db_connection k2 = new db_connection();
            l=k2.Selectgame(_userId,j,_homework);
             if (l[0].Count > 0)
@@ -55,7 +56,7 @@ namespace test
             if (_currentGame >= 0) { 
             //update the yesNo filed to Yes
          db_connection m = new db_connection();
-         bool b=   m.updateWordInClass(_userId, l[0].ElementAt(_currentGame), 1);
+         bool b=   m.updateWordInClass(_userId, l[0].ElementAt(_currentGame), 1,_classNumber);
          MessageBox.Show(b + "");
          _currentGame--;
             }
@@ -79,7 +80,7 @@ namespace test
             if (_currentGame >= 0) { 
             //update the yesNo filed to No1
             db_connection m = new db_connection();
-            bool b = m.updateWordInClass(_userId, l[0].ElementAt(_currentGame), 2);
+            bool b = m.updateWordInClass(_userId, l[0].ElementAt(_currentGame), 2,_classNumber);
             MessageBox.Show(b + "");
             _currentGame--;
             }

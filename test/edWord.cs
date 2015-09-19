@@ -196,20 +196,20 @@ namespace test
         private void okButton_Click(object sender, EventArgs e)
         {
             string word =
-            textBox1.Text + comboBox1.Text +
-            textBox2.Text + comboBox2.Text +
-            textBox3.Text + comboBox3.Text +
-            textBox4.Text + comboBox4.Text +
-            textBox5.Text + comboBox5.Text +
-            textBox6.Text + comboBox6.Text +
-            textBox7.Text + comboBox7.Text +
-            textBox8.Text + comboBox8.Text +
-            textBox9.Text + comboBox9.Text +
-            textBox10.Text + comboBox10.Text +
-            textBox11.Text + comboBox11.Text +
-            textBox12.Text + comboBox12.Text +
-            textBox13.Text + comboBox13.Text +
-            textBox14.Text + comboBox14.Text;
+        textBox1.Text + ((comboBox1.Text != "") ? comboBox1.Text[1] + "" : "") +
+                    textBox2.Text + ((comboBox2.Text != "") ? comboBox2.Text[1] + "" : "") +
+                    textBox3.Text + ((comboBox3.Text != "") ? comboBox3.Text[1] + "" : "") +
+                    textBox4.Text + ((comboBox4.Text != "") ? comboBox4.Text[1] + "" : "") +
+                    textBox5.Text + ((comboBox5.Text != "") ? comboBox5.Text[1] + "" : "") +
+                    textBox6.Text + ((comboBox6.Text != "") ? comboBox6.Text[1] + "" : "") +
+                    textBox7.Text + ((comboBox7.Text != "") ? comboBox7.Text[1] + "" : "") +
+                    textBox8.Text + ((comboBox8.Text != "") ? comboBox8.Text[1] + "" : "") +
+                    textBox9.Text + ((comboBox9.Text != "") ? comboBox9.Text[1] + "" : "") +
+                    textBox10.Text + ((comboBox10.Text != "") ? comboBox10.Text[1] + "" : "") +
+                    textBox11.Text + ((comboBox11.Text != "") ? comboBox11.Text[1] + "" : "") +
+                    textBox12.Text + ((comboBox12.Text != "") ? comboBox12.Text[1] + "" : "") +
+                    textBox13.Text + ((comboBox13.Text != "") ? comboBox13.Text[1] + "" : "") +
+                    textBox14.Text + ((comboBox14.Text != "") ? comboBox14.Text[1] + "" : "");
             string word_no_nikud="";
             word_no_nikud =
                       textBox1.Text +
@@ -486,20 +486,20 @@ namespace test
         private void button3_Click(object sender, EventArgs e)
         {
             milaAlgo k = new milaAlgo(
-                   textBox1.Text + comboBox1.Text +
-                   textBox2.Text + comboBox2.Text +
-                   textBox3.Text + comboBox3.Text +
-                   textBox4.Text + comboBox4.Text +
-                   textBox5.Text + comboBox5.Text +
-                   textBox6.Text + comboBox6.Text +
-                   textBox7.Text + comboBox7.Text +
-                   textBox8.Text + comboBox8.Text +
-                   textBox9.Text + comboBox9.Text +
-                   textBox10.Text + comboBox10.Text +
-                   textBox11.Text + comboBox11.Text +
-                   textBox12.Text + comboBox12.Text +
-                   textBox13.Text + comboBox13.Text +
-                   textBox14.Text + comboBox14.Text);
+                 textBox1.Text + ((comboBox1.Text != "") ? comboBox1.Text[1] + "" : "") +
+                    textBox2.Text + ((comboBox2.Text != "") ? comboBox2.Text[1] + "" : "") +
+                    textBox3.Text + ((comboBox3.Text != "") ? comboBox3.Text[1] + "" : "") +
+                    textBox4.Text + ((comboBox4.Text != "") ? comboBox4.Text[1] + "" : "") +
+                    textBox5.Text + ((comboBox5.Text != "") ? comboBox5.Text[1] + "" : "") +
+                    textBox6.Text + ((comboBox6.Text != "") ? comboBox6.Text[1] + "" : "") +
+                    textBox7.Text + ((comboBox7.Text != "") ? comboBox7.Text[1] + "" : "") +
+                    textBox8.Text + ((comboBox8.Text != "") ? comboBox8.Text[1] + "" : "") +
+                    textBox9.Text + ((comboBox9.Text != "") ? comboBox9.Text[1] + "" : "") +
+                    textBox10.Text + ((comboBox10.Text != "") ? comboBox10.Text[1] + "" : "") +
+                    textBox11.Text + ((comboBox11.Text != "") ? comboBox11.Text[1] + "" : "") +
+                    textBox12.Text + ((comboBox12.Text != "") ? comboBox12.Text[1] + "" : "") +
+                    textBox13.Text + ((comboBox13.Text != "") ? comboBox13.Text[1] + "" : "") +
+                    textBox14.Text + ((comboBox14.Text != "") ? comboBox14.Text[1] + "" : ""));
             NumOfSyl.Text = k.MisparHavarot() + "";
         }
         }

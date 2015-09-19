@@ -62,6 +62,13 @@ namespace test
             this.Dispose();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            charts k = new charts(this);
+            k.Show();
+            this.Hide();
+        }
+
 
       
     }
