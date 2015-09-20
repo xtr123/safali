@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(administratorMain_Panle));
             this.titleLable = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.edit_word = new System.Windows.Forms.Button();
             this.add_remove_Word_button = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.addRemoveUser = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,6 +43,14 @@
             // 
             resources.ApplyResources(this.titleLable, "titleLable");
             this.titleLable.Name = "titleLable";
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::test.Properties.Resources.graph_but;
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox2
             // 
@@ -83,14 +91,6 @@
             this.addRemoveUser.Name = "addRemoveUser";
             this.addRemoveUser.UseVisualStyleBackColor = true;
             this.addRemoveUser.Click += new System.EventHandler(this.addRemoveUser_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::test.Properties.Resources.add_remove_user;
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // administratorMain_Panle
             // 

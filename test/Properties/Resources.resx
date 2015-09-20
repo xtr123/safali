@@ -130,6 +130,9 @@
   <data name="42mv" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Pics\42mv.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="safa-li- logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\safa-li- logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dictionary" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Pics\dictionary.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,8 +142,8 @@
   <data name="2858291_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2858291_18.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Funshine Bear 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Pics\Funshine Bear 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hw11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hw11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add_remove user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_remove user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,13 +196,13 @@
   <data name="Mammooth_128x128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Pics\Mammooth_128x128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hw11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hw11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Funshine Bear 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Pics\Funshine Bear 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pencil1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="safa-li- logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\safa-li- logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="graph_but" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\graph_but.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
