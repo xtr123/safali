@@ -99,10 +99,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gan CLM", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label1.Location = new System.Drawing.Point(136, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 28);
+            this.label1.Size = new System.Drawing.Size(195, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = ":הכנת שיעור עבור";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -111,10 +111,10 @@
             // 
             this.groupBox4.Controls.Add(this.comboBox20);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox4.Location = new System.Drawing.Point(33, 322);
+            this.groupBox4.Location = new System.Drawing.Point(12, 260);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox4.Size = new System.Drawing.Size(319, 76);
+            this.groupBox4.Size = new System.Drawing.Size(339, 63);
             this.groupBox4.TabIndex = 65;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "מיקום הצליל:";
@@ -127,7 +127,7 @@
             "תחילה",
             "אמצע",
             "סוף"});
-            this.comboBox20.Location = new System.Drawing.Point(19, 27);
+            this.comboBox20.Location = new System.Drawing.Point(29, 21);
             this.comboBox20.Name = "comboBox20";
             this.comboBox20.Size = new System.Drawing.Size(213, 31);
             this.comboBox20.TabIndex = 42;
@@ -136,10 +136,10 @@
             // 
             this.groupBox3.Controls.Add(this.comboBox19);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox3.Location = new System.Drawing.Point(33, 239);
+            this.groupBox3.Location = new System.Drawing.Point(12, 193);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox3.Size = new System.Drawing.Size(319, 77);
+            this.groupBox3.Size = new System.Drawing.Size(340, 60);
             this.groupBox3.TabIndex = 64;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "חלק הדיבר:";
@@ -160,10 +160,10 @@
             // 
             this.groupBox2.Controls.Add(this.comboBox18);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox2.Location = new System.Drawing.Point(33, 158);
+            this.groupBox2.Location = new System.Drawing.Point(12, 132);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox2.Size = new System.Drawing.Size(319, 75);
+            this.groupBox2.Size = new System.Drawing.Size(340, 57);
             this.groupBox2.TabIndex = 63;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "הטעמה:";
@@ -175,14 +175,14 @@
             this.comboBox18.Items.AddRange(new object[] {
             "מלעיל",
             "מלרע"});
-            this.comboBox18.Location = new System.Drawing.Point(19, 28);
+            this.comboBox18.Location = new System.Drawing.Point(19, 19);
             this.comboBox18.Name = "comboBox18";
             this.comboBox18.Size = new System.Drawing.Size(213, 31);
             this.comboBox18.TabIndex = 40;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Gan CLM", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button1.Location = new System.Drawing.Point(453, 365);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 45);
@@ -193,7 +193,7 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Gan CLM", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button2.Location = new System.Drawing.Point(1008, 239);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 39);
@@ -204,7 +204,7 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Gan CLM", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button3.Location = new System.Drawing.Point(1008, 194);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 39);
@@ -251,7 +251,7 @@
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Gan CLM", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button4.Location = new System.Drawing.Point(978, 378);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(123, 49);
@@ -740,7 +740,7 @@
             // NumOfSyl
             // 
             this.NumOfSyl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.NumOfSyl.Location = new System.Drawing.Point(108, 114);
+            this.NumOfSyl.Location = new System.Drawing.Point(108, 88);
             this.NumOfSyl.Name = "NumOfSyl";
             this.NumOfSyl.Size = new System.Drawing.Size(59, 38);
             this.NumOfSyl.TabIndex = 56;
@@ -751,7 +751,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label6.Location = new System.Drawing.Point(173, 114);
+            this.label6.Location = new System.Drawing.Point(173, 88);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(134, 31);
             this.label6.TabIndex = 67;
@@ -772,7 +772,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1405, 725);
+            this.ClientSize = new System.Drawing.Size(1362, 725);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.groupBox7);

@@ -195,8 +195,9 @@ namespace test
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            string word =
-        textBox1.Text + ((comboBox1.Text != "") ? comboBox1.Text[1] + "" : "") +
+            
+            string word = ""+
+                    textBox1.Text + ((comboBox1.Text != "") ? comboBox1.Text[1] + "" : "") +
                     textBox2.Text + ((comboBox2.Text != "") ? comboBox2.Text[1] + "" : "") +
                     textBox3.Text + ((comboBox3.Text != "") ? comboBox3.Text[1] + "" : "") +
                     textBox4.Text + ((comboBox4.Text != "") ? comboBox4.Text[1] + "" : "") +
@@ -363,7 +364,7 @@ namespace test
                             {
 
                                 //MessageBox.Show(word[i] + "");
-                                ((ComboBox)(t1[0])).Text = word[i + 1] + "";
+                                ((ComboBox)(t1[0])).Text = "א" + word[i + 1] + "";
 
                             }
                         }
